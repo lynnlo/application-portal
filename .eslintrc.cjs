@@ -5,5 +5,8 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/semi': 'off',
+    'no-trailing-spaces': 'off',
+    semi: 0,
   },
-};
+}

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
@@ -19,8 +19,12 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
+    "@mantine/carousel": "^7.4.0",
     "@mantine/core": "7.3.2",
     "@mantine/hooks": "7.3.2",
+    "@tabler/icons-react": "^2.45.0",
+    "embla-carousel-autoplay": "^8.0.0-rc18",
+    "embla-carousel-react": "7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.0"

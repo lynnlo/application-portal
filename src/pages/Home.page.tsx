@@ -1,11 +1,9 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import AppBar from '../components/appbar/AppBar'
 
 export function HomePage() {
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+      <AppBar />
     </>
-  );
+  )
 }

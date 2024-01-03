@@ -2280,6 +2280,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/carousel@npm:^7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/carousel@npm:7.4.0"
+  peerDependencies:
+    "@mantine/core": 7.4.0
+    "@mantine/hooks": 7.4.0
+    embla-carousel-react: ">=7.0.0"
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 85aa93376c55394d1adf9bb555ccf639aada7ed5e06cbab1d75d489f687a3f4b9ac82f75fb86c4ac799fe73cff39a3de6e982ba664123b2374ce43b92f466015
+  languageName: node
+  linkType: hard
+
 "@mantine/core@npm:7.3.2":
   version: 7.3.2
   resolution: "@mantine/core@npm:7.3.2"
@@ -3981,6 +3994,25 @@ __metadata:
     "@types/express": "npm:^4.7.0"
     file-system-cache: "npm:2.3.0"
   checksum: e0f657336ad9d554715a362119e550707129611ee31809b3d5a081d20830f331cf40bdf1471d667d7824f17ae2cd34f75b69dca8c2e443b09266d228d7937f2a
+  languageName: node
+  linkType: hard
+
+"@tabler/icons-react@npm:^2.45.0":
+  version: 2.45.0
+  resolution: "@tabler/icons-react@npm:2.45.0"
+  dependencies:
+    "@tabler/icons": "npm:2.45.0"
+    prop-types: "npm:^15.7.2"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0
+  checksum: a153d30d88b87489b44af9dc73e82bc13a9ae18ba33c47e73b8efbe6b36e5a9e61c924aa4f297f6e0a238b630c5b2ade77db2dcad8b1f21c43b356d3ad38086b
+  languageName: node
+  linkType: hard
+
+"@tabler/icons@npm:2.45.0":
+  version: 2.45.0
+  resolution: "@tabler/icons@npm:2.45.0"
+  checksum: e221e091554839771774d0d8438d434987fcc7096892b24e53ef4fc78fe3b8087cc047293e3eb2084b3b5b9173c39dbf5aaff8cbbe78be142bc2bf55cf178ec2
   languageName: node
   linkType: hard
 
@@ -6242,6 +6274,33 @@ __metadata:
   version: 1.4.615
   resolution: "electron-to-chromium@npm:1.4.615"
   checksum: 6602172761e44ca1a6c010a010efd0c42710e1e08911e76dd2d3df72ae2a563fb75b0853387273d1e45a4befd314162b2b1debcf9055513f62c6d6a8df4de73a
+  languageName: node
+  linkType: hard
+
+"embla-carousel-autoplay@npm:^8.0.0-rc18":
+  version: 8.0.0-rc18
+  resolution: "embla-carousel-autoplay@npm:8.0.0-rc18"
+  peerDependencies:
+    embla-carousel: 8.0.0-rc18
+  checksum: c9688e292dbfc7140674f77aa17315ea82eddaf4eb0213c4a42b7de2931cd96178178aeac42433d7b7a2b3bbc29dcadcec392f0b751c7d49a2ef120c7e2bb9b5
+  languageName: node
+  linkType: hard
+
+"embla-carousel-react@npm:7.1.0":
+  version: 7.1.0
+  resolution: "embla-carousel-react@npm:7.1.0"
+  dependencies:
+    embla-carousel: "npm:7.1.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: 05e33fdb1062fde0164a0685163a5212f8e8f343fbe28e9a8e2348c989d8825d80fdcecfed485c7617d27f8f5d72b393612a3dd13ef9cffc02ef0cf21109ba51
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:7.1.0":
+  version: 7.1.0
+  resolution: "embla-carousel@npm:7.1.0"
+  checksum: 3fcfe5b287c5d09d35dac76b6612567cf6f15abdae0bbf7d10754db9f732dd90cdfdf5bc7405d8fb3f65542bdead09971e93e024a0db9b3f1fcc653a70e733bc
   languageName: node
   linkType: hard
 
@@ -9016,6 +9075,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "mantine-vite-template@workspace:."
   dependencies:
+    "@mantine/carousel": "npm:^7.4.0"
     "@mantine/core": "npm:7.3.2"
     "@mantine/hooks": "npm:7.3.2"
     "@storybook/addon-essentials": "npm:^7.6.6"
@@ -9025,6 +9085,7 @@ __metadata:
     "@storybook/react": "npm:^7.6.6"
     "@storybook/react-vite": "npm:^7.6.6"
     "@storybook/testing-library": "npm:^0.2.2"
+    "@tabler/icons-react": "npm:^2.45.0"
     "@testing-library/dom": "npm:^9.3.3"
     "@testing-library/jest-dom": "npm:^6.1.5"
     "@testing-library/react": "npm:^14.1.2"
@@ -9034,6 +9095,8 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
     "@typescript-eslint/parser": "npm:^6.9.1"
     "@vitejs/plugin-react": "npm:^4.2.1"
+    embla-carousel-autoplay: "npm:^8.0.0-rc18"
+    embla-carousel-react: "npm:7.1.0"
     eslint: "npm:^8.53.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-airbnb-typescript: "npm:^17.1.0"
