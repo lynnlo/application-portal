@@ -1,13 +1,12 @@
 import React from 'react'
-import { Box, Group, Image, Button, useMantineColorScheme, ActionIcon } from '@mantine/core'
+import { Box, Group, Button, useMantineColorScheme, ActionIcon, Text } from '@mantine/core'
 
 import { Link } from 'react-router-dom'
 
 import { IconBrightnessDown } from '@tabler/icons-react'
 
 import classes from './AppBar.module.css'
-import logo_mobile from './grecco_logo_mobile.png'
-import logo_desktop from './grecco_logo_desktop.png'
+import Logo from '../logo/Logo'
 
 export default function AppBarComponent() {
   const { colorScheme, setColorScheme } = useMantineColorScheme()
@@ -16,27 +15,22 @@ export default function AppBarComponent() {
     <Box>
       <header className={classes.header}>
         <Group justify="space-between">
-          <Group visibleFrom="sm">
-            <Image src={logo_desktop} width={200} height={70} />
-          </Group>
-          <Group hiddenFrom="sm">
-            <Image src={logo_mobile} width={70} height={70} />
-          </Group>
+          <Logo />
 
           {/* Desktop */}
-          <Group justify="space-evenly" visibleFrom="sm">
+          <Group justify="space-evenly" visibleFrom="md">
             <Link className={classes.link} to="/">
-              Home
+              <Text> Home </Text>
             </Link>
             <Link className={classes.link} to="/home">
-              Position
+              <Text> Positions </Text>
             </Link>
             <Link className={classes.link} to="/home">
-              Contact
+              <Text> Register </Text>
             </Link>
           </Group>
 
-          <Group justify="space-evenly">
+          <Group justify="space-evenly" visibleFrom="md">
             <ActionIcon
               variant="subtle"
               color="light"

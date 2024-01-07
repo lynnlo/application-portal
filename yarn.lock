@@ -5282,6 +5282,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bezier-easing@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "bezier-easing@npm:2.1.0"
+  checksum: 138a160698de3c12501479cc80280d5cc0ab47df73e20d7b5058cba6d62c0876eb97e63aa1e398233269aa2a6bb396fb0ee394da391de7258c9da20729df5158
+  languageName: node
+  linkType: hard
+
 "big-integer@npm:^1.6.44":
   version: 1.6.51
   resolution: "big-integer@npm:1.6.51"
@@ -9105,6 +9112,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.21.0"
+    react-scroll-parallax: "npm:^3.4.5"
     storybook: "npm:^7.6.6"
     storybook-dark-mode: "npm:^3.0.3"
     stylelint: "npm:^16.0.2"
@@ -9879,6 +9887,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parallax-controller@npm:^1.7.1":
+  version: 1.7.1
+  resolution: "parallax-controller@npm:1.7.1"
+  dependencies:
+    bezier-easing: "npm:^2.1.0"
+  checksum: 065fbb49de5dbaf513e210c54bd2a3a2e2b978db2d38d6dad2dcd7d309cb7036e2cd7d2555bf37bc3a565d72e6fb842ccbc55938eb30b1a38bffb750a8862f7f
+  languageName: node
+  linkType: hard
+
 "parent-module@npm:^1.0.0":
   version: 1.0.1
   resolution: "parent-module@npm:1.0.1"
@@ -10642,6 +10659,18 @@ __metadata:
   peerDependencies:
     react: ">=16.8"
   checksum: ff499df6994353b79ddd4abf35004c4dce944668fa16b18896a72ba255447d3f5ca50018d90f3034abbe08b87a5757141b09144f8eb17e4f375d8850373a11c3
+  languageName: node
+  linkType: hard
+
+"react-scroll-parallax@npm:^3.4.5":
+  version: 3.4.5
+  resolution: "react-scroll-parallax@npm:3.4.5"
+  dependencies:
+    parallax-controller: "npm:^1.7.1"
+  peerDependencies:
+    react: ^16.8.0-0 || >=17.0.1 || ^18.0.0
+    react-dom: ^16.8.0-0 || >=17.0.1 || ^18.0.0
+  checksum: 6db8556d94ed22aefcf08c6e1758e24bdcf0dfb68c7f57265ae69b25696cfbaa478af4b569d8a28e55fa304cdfc39ce6b1229aa54a40a8358b8ece52c4d03031
   languageName: node
   linkType: hard
 

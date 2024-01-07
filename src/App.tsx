@@ -1,13 +1,16 @@
 import '@mantine/core/styles.css'
+import '@mantine/carousel/styles.css'
 import { MantineProvider } from '@mantine/core'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import { Router } from './Router'
 import { theme } from './theme'
-import '@mantine/carousel/styles.css'
 
 export default function App() {
   return (
-    <MantineProvider theme={theme}>
-      <Router />
-    </MantineProvider>
+    <ParallaxProvider>
+      <MantineProvider theme={theme}>
+        <Router />
+      </MantineProvider>
+    </ParallaxProvider>
   )
 }

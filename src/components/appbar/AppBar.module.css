@@ -1,5 +1,7 @@
 .header {
-  padding: var(--mantine-spacing-md) var(--mantine-spacing-lg);
+  width: 100%;
+  background: var(--mantine-color-body);
+  padding: var(--mantine-spacing-sm) var(--mantine-spacing-md);
 }
 
 .link {
@@ -9,11 +11,6 @@
   text-decoration: none;
 
   @mixin hover {
-    @mixin light {
-      background: var(--mantine-color-gray-2);
-    }
-    @mixin dark {
-      background: var(--mantine-color-dark-6);
-    }
+    background: var(--mantine-color-default-hover);
   }
 }
