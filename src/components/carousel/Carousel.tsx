@@ -2,28 +2,34 @@ import React from 'react'
 import { Carousel } from '@mantine/carousel'
 import { Center, Flex, Image, Overlay, Text, Title } from '@mantine/core'
 
-import image1 from './image1.jpg'
-import image2 from './image2.jpg'
-import image3 from './image3.jpg'
-import image4 from './image4.jpg'
+import image1 from './image-1.jpg'
+import image2 from './image-2.jpg'
+import image3 from './image-3.jpg'
 import Logo from '../logo/Logo'
-import { theme } from '../../theme'
 
-const images = [image1, image2, image3, image4]
+const images = [
+  {
+    image: image1,
+    caption: 'Friendly work culture.',
+  },
+  {
+    image: image2,
+    caption: 'Free coffee, everyday!',
+  },
+  {
+    image: image3,
+    caption: 'Competitive salary and benefits.',
+  },
+]
 const imageSlides = images.map((image, index) => (
   <Carousel.Slide key={index}>
-    <Image src={image} fit="cover" />
+    <Image src={image.image} fit="cover" width="100%" height="100%" />
 
-    <Overlay backgroundOpacity={0.1}>
-      <Flex mih="100%" align="end" justify="start">
-        <Flex bg="var(--mantine-color-body)" miw="100%" justify="space-between">
-          <Center miw="15%">
-            <Logo />
-          </Center>
-          <Center miw="15%">
-            <Text> {image} </Text>
-          </Center>
-        </Flex>
+    <Overlay backgroundOpacity={0.5}>
+      <Flex direction="column" mih="100%" align="center" justify="center">
+        <Title size="5vw" style={{ color: 'white', opacity: 0.5 }}>
+          {image.caption}
+        </Title>
       </Flex>
     </Overlay>
   </Carousel.Slide>
@@ -31,7 +37,7 @@ const imageSlides = images.map((image, index) => (
 
 export default function CarouselComponent() {
   return (
-    <Carousel withControls={false} align="center" height="80vh" loop>
+    <Carousel withControls={false} align="center" height="92vh" loop>
       {imageSlides}
     </Carousel>
   )

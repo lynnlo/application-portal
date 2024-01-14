@@ -1,0 +1,10 @@
+.box {
+  padding: 0.5em;
+  width: calc(100% / 6);
+}
+
+.card {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 1rem;
+}

@@ -12,7 +12,7 @@ export default function AppBarComponent() {
   const { colorScheme, setColorScheme } = useMantineColorScheme()
 
   return (
-    <Box>
+    <Box mih="8vh">
       <header className={classes.header}>
         <Group justify="space-between">
           <Logo />
@@ -22,10 +22,10 @@ export default function AppBarComponent() {
             <Link className={classes.link} to="/">
               <Text> Home </Text>
             </Link>
-            <Link className={classes.link} to="/home">
+            <Link className={classes.link} to="/positions">
               <Text> Positions </Text>
             </Link>
-            <Link className={classes.link} to="/home">
+            <Link className={classes.link} to="/register">
               <Text> Register </Text>
             </Link>
           </Group>
