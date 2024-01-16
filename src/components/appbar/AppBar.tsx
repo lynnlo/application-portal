@@ -25,8 +25,8 @@ export default function AppBarComponent() {
             <Link className={classes.link} to="/positions">
               <Text> Positions </Text>
             </Link>
-            <Link className={classes.link} to="/register">
-              <Text> Register </Text>
+            <Link className={classes.link} to="/about">
+              <Text> About Us </Text>
             </Link>
           </Group>
 

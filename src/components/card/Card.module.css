@@ -4,6 +4,7 @@
 }
 
 .card {
+  background: darken(var(--mantine-color-body), 0.1);
   aspect-ratio: 1 / 1;
   width: 100%;
   border-radius: 1rem;
