@@ -1,0 +1,14 @@
+.link {
+  font-family: var(--mantine-font-family);
+  font-size: var(--mantine-font-size-sm);
+
+  color: var(--mantine-color-anchor);
+  text-decoration: none;
+  background-color: transparent;
+  transition: color 0.1s ease-in-out;
+
+  &:hover {
+    color: var(--mantine-color-anchor-hover);
+    text-decoration: underline;
+  }
+}

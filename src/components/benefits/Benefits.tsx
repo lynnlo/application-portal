@@ -8,6 +8,6 @@ import galaxy from './orange.svg'
 import classes from './Benefits.module.css'
 import Logo from '../logo/Logo'
 
-export default function BenefitsComponent() {
+export default function Benefits() {
   return <Box>{}</Box>
 }

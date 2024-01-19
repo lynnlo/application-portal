@@ -9,6 +9,8 @@ module.exports = {
     'no-trailing-spaces': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'react/no-unescaped-entities': 'off',
+    'arrow-body-style': 'off',
     semi: 0,
   },
 }

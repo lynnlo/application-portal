@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Group, Button, useMantineColorScheme, ActionIcon, Text } from '@mantine/core'
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { IconBrightnessDown } from '@tabler/icons-react'
 
@@ -9,6 +9,7 @@ import classes from './AppBar.module.css'
 import Logo from '../logo/Logo'
 
 export default function AppBarComponent() {
+  const navigate = useNavigate()
   const { colorScheme, setColorScheme } = useMantineColorScheme()
 
   return (
@@ -39,9 +40,22 @@ export default function AppBarComponent() {
               <IconBrightnessDown />
             </ActionIcon>
 
-            <Button color="blue">Login</Button>
+            <Button
+              color="blue"
+              onClick={() => {
+                navigate('login', { state: { register: false } })
+              }}
+            >
+              Login
+            </Button>
 
-            <Button variant="outline" color="light">
+            <Button
+              variant="outline"
+              color="light"
+              onClick={() => {
+                navigate('login', { state: { register: true } })
+              }}
+            >
               Register
             </Button>
           </Group>

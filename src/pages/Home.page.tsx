@@ -7,7 +7,6 @@ import Spacer from '../components/spacer/Spacer'
 export function HomePage() {
   return (
     <>
-      <AppBar />
       <Carousel />
       <Benefits />
     </>

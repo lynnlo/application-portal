@@ -54,10 +54,9 @@ export function PositionsPage() {
 
     return new_data
   }
-  
+
   return (
     <>
-      <AppBar />
       <Box>
         <Center style={{ width: '100vw', height: '90vh' }}>
           <Grid style={{ width: '90vw', height: '60vh' }}>
