@@ -1,19 +1,14 @@
-.box {
-  padding: 0.5em;
-  width: calc(100% / 4);
-}
-
 .card {
-  aspect-ratio: 1 / 1;
-  height: 100%;
   width: 100%;
+  height: 25vw;
+  margin: 2vh 0;
   border-radius: 1rem;
   transition: transform 0.1s ease-in-out;
 
   @mixin hover {
     &:hover {
       position: static;
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
   }
 }

@@ -22,7 +22,7 @@ export function Router() {
             <Route path="/positions" element={<PositionsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/apply" element={<ApplyPage />} />
+            <Route path="/apply/:jobId" element={<ApplyPage />} />
           </Routes>
         </AppShell.Main>
       </AppShell>

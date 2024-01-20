@@ -32,6 +32,14 @@ const imageSlides = images.map((image, index) => (
         </Title>
       </Flex>
     </Overlay>
+
+    <Overlay backgroundOpacity={0}>
+      <Flex direction="column" mih="100%" align="center" justify="end" visibleFrom="sm">
+        <Text m="md" size="sm" style={{ color: 'gray' }}>
+          © 2024 Greco Co. All rights reserved.
+        </Text>
+      </Flex>
+    </Overlay>
   </Carousel.Slide>
 ))
 

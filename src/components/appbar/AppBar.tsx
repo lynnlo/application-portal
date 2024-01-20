@@ -1,5 +1,15 @@
 import React from 'react'
-import { Box, Group, Button, useMantineColorScheme, ActionIcon, Text } from '@mantine/core'
+import {
+  Box,
+  Group,
+  Button,
+  useMantineColorScheme,
+  ActionIcon,
+  Text,
+  Drawer,
+  Stack,
+  Title,
+} from '@mantine/core'
 
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -11,6 +21,7 @@ import Logo from '../logo/Logo'
 export default function AppBarComponent() {
   const navigate = useNavigate()
   const { colorScheme, setColorScheme } = useMantineColorScheme()
+  const [opened, setOpened] = React.useState(false)
 
   return (
     <Box mih="8vh">
@@ -62,11 +73,83 @@ export default function AppBarComponent() {
 
           {/* Mobile */}
           <Group hiddenFrom="md">
-            <ActionIcon variant="subtle" color="light">
+            <ActionIcon
+              variant="subtle"
+              color="light"
+              onClick={() => {
+                setOpened((v) => !v)
+              }}
+            >
               <IconMenu2 />
             </ActionIcon>
           </Group>
         </Group>
+        <Drawer
+          opened={opened}
+          onClose={() => {
+            setOpened(false)
+          }}
+          title={<Title order={3}> Grecco Co. Careers </Title>}
+        >
+          <Stack justify="space-between" h="90vh">
+            <Stack gap="md" align="start">
+              <Button
+                variant="subtle"
+                className={classes.link}
+                onClick={() => {
+                  setOpened(false)
+                  navigate('/')
+                }}
+              >
+                <Text> Home </Text>
+              </Button>
+              <Button
+                variant="subtle"
+                className={classes.link}
+                onClick={() => {
+                  setOpened(false)
+                  navigate('/positions')
+                }}
+              >
+                <Text> Positions </Text>
+              </Button>
+              <Button
+                variant="subtle"
+                className={classes.link}
+                onClick={() => {
+                  setOpened(false)
+                  navigate('/about')
+                }}
+              >
+                <Text> About Us </Text>
+              </Button>
+            </Stack>
+            <Stack>
+              <Button
+                variant="outline"
+                color="light"
+                onClick={() => {
+                  setOpened(false)
+                  navigate('login', { state: { register: true } })
+                }}
+              >
+                Register
+              </Button>
+              <Button
+                color="blue"
+                onClick={() => {
+                  setOpened(false)
+                  navigate('login', { state: { register: false } })
+                }}
+              >
+                Login
+              </Button>
+              <Text ta="center" size="xs" hiddenFrom="sm">
+                © 2024 Grecco Co.
+              </Text>
+            </Stack>
+          </Stack>
+        </Drawer>
       </header>
     </Box>
   )

@@ -35,7 +35,7 @@ export const Apply = () => {
         <Stepper.Step>Application</Stepper.Step>
         <Stepper.Step>Final Thoughts</Stepper.Step>
       </Stepper>
-      <Title ta="left" w={500} size="lg">
+      <Title ta="left" w={500}>
         {activeStep === 0 && "Let's get to each other"}
         {activeStep === 1 && "Tell us why you're unique"}
         {activeStep === 2 && 'Just one last thing...'}
