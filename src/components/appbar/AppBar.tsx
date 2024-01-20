@@ -101,6 +101,14 @@ export default function AppBarComponent() {
 
           {/* Mobile */}
           <Group hiddenFrom="md">
+            
+            <ActionIcon
+              variant="subtle"
+              color="light"
+              onClick={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}
+            >
+              <IconBrightnessDown />
+            </ActionIcon>
             <ActionIcon
               variant="subtle"
               color="light"

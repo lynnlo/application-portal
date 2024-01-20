@@ -11,14 +11,17 @@ const images = [
   {
     image: image1,
     caption: 'Friendly work culture.',
+    credits: 'Campaign Creators'
   },
   {
     image: image2,
     caption: 'Free coffee, everyday!',
+    credits: 'Alexender Grey'
   },
   {
     image: image3,
     caption: 'Competitive salary and benefits.',
+    credits: 'Fahmi Fakhrudin'
   },
 ]
 const imageSlides = images.map((image, index) => (
@@ -34,9 +37,12 @@ const imageSlides = images.map((image, index) => (
     </Overlay>
 
     <Overlay backgroundOpacity={0}>
-      <Flex direction="column" mih="100%" align="center" justify="end" visibleFrom="sm">
-        <Text m="md" size="sm" style={{ color: 'gray' }}>
+      <Flex direction="column" mih="100%" align="center" justify="end">
+        <Text m="sm" size="sm" style={{ color: 'gray' }} visibleFrom="sm">
           © 2024 Greco Co. All rights reserved.
+        </Text>
+        <Text m="sm" size="sm" style={{ color: 'gray' }}>
+          {image.credits}
         </Text>
       </Flex>
     </Overlay>
