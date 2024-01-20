@@ -15,10 +15,21 @@ import {
   Space,
 } from '@mantine/core'
 import { Link } from 'react-router-dom'
+import { Form, UseFormReturnType } from '@mantine/form'
 
 import classes from './Login.module.css'
 
-export const Login = () => {
+export interface LoginProps {
+  form: UseFormReturnType<{
+    email: string
+    password: string
+    name: string
+  }>
+  handleLogin: () => void
+  error: string | null
+}
+
+export const Login = ({ form, handleLogin, error }: LoginProps) => {
   return (
     <Container fluid>
       <Title ta="center"> Welcome Back </Title>
@@ -29,23 +40,26 @@ export const Login = () => {
         </Link>
       </Text>
       <Space h="lg" />
-      <Center>
+      <Form form={form}>
         <Paper w={360} p="lg" shadow="md" radius="md" withBorder>
           <Stack>
-            <TextInput label="Email" required />
-            <PasswordInput label="Password" required />
+            <TextInput {...form.getInputProps('email')} label="Email" required />
+            <PasswordInput {...form.getInputProps('password')} label="Password" required />
             <Group gap="sm" justify="space-between">
               <Checkbox label="Remember me" />
               <Link className={classes.link} to="/forgot-password">
                 Forgot password?
               </Link>
             </Group>
-            <Button type="submit" radius="lg" fullWidth>
+            <Button type="submit" radius="lg" fullWidth onClick={handleLogin}>
               Login
             </Button>
           </Stack>
+          <Text c="red" mt="sm">
+            {error}
+          </Text>
         </Paper>
-      </Center>
+      </Form>
     </Container>
   )
 }

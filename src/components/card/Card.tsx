@@ -11,7 +11,6 @@ import {
   Image,
   ActionIcon,
 } from '@mantine/core'
-import { IconBookmark } from '@tabler/icons-react'
 import { useNavigate } from 'react-router-dom'
 
 import { Position } from '../../data/positions'
@@ -29,7 +28,7 @@ export default function CardComponent(props: Position) {
           <Text size="sm">
             {props.location} · {props.jobType}
           </Text>
-          <Text size="sm">{`${props.salary[0]}k - ${props.salary[1]}k`}</Text>
+          <Text size="sm">{`${props.salary0}k - ${props.salary1}k`}</Text>
         </Stack>
         <Group h="40%" align="end" justify="end" gap={0}>
           <Button

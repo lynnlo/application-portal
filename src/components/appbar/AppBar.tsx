@@ -10,18 +10,28 @@ import {
   Stack,
   Title,
 } from '@mantine/core'
-
 import { Link, useNavigate } from 'react-router-dom'
-
 import { IconBrightnessDown, IconMenu2, IconStack } from '@tabler/icons-react'
+import { User } from '@supabase/supabase-js'
+
+import supabase from '../../supabase'
 
 import classes from './AppBar.module.css'
 import Logo from '../logo/Logo'
 
 export default function AppBarComponent() {
   const navigate = useNavigate()
+  const [user, setUser] = React.useState<User>()
   const { colorScheme, setColorScheme } = useMantineColorScheme()
   const [opened, setOpened] = React.useState(false)
+
+  React.useEffect(() => {
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_IN') {
+        setUser(session?.user)
+      }
+    })
+  }, [])
 
   return (
     <Box mih="8vh">
@@ -51,24 +61,42 @@ export default function AppBarComponent() {
               <IconBrightnessDown />
             </ActionIcon>
 
-            <Button
-              color="blue"
-              onClick={() => {
-                navigate('login', { state: { register: false } })
-              }}
-            >
-              Login
-            </Button>
+            {user ? (
+              <>
+                <Text> Welcome {user.phone} </Text>
+                <Button
+                  variant="subtle"
+                  color="grey"
+                  onClick={() => {
+                    supabase.auth.signOut()
+                    setUser(undefined)
+                  }}
+                >
+                  Log Out
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button
+                  color="blue"
+                  onClick={() => {
+                    navigate('login', { state: { register: false } })
+                  }}
+                >
+                  Login
+                </Button>
 
-            <Button
-              variant="outline"
-              color="light"
-              onClick={() => {
-                navigate('login', { state: { register: true } })
-              }}
-            >
-              Register
-            </Button>
+                <Button
+                  variant="outline"
+                  color="light"
+                  onClick={() => {
+                    navigate('login', { state: { register: true } })
+                  }}
+                >
+                  Register
+                </Button>
+              </>
+            )}
           </Group>
 
           {/* Mobile */}

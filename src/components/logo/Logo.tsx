@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Group, Image, useMantineColorScheme, getBreakpointValue } from '@mantine/core'
+import { useNavigate } from 'react-router-dom'
 import { useMediaQuery } from '@mantine/hooks'
 
 import logo_mobile_dark from './grecco_logo_mobile.png'
@@ -20,12 +21,19 @@ interface LogoProps {
 }
 
 export default function Logo(props: LogoProps) {
+  const navigate = useNavigate()
+
   const { colorScheme } = useMantineColorScheme()
   const isFull = useMediaQuery('(min-width: 48em')
   const classNames = [classes.logo].join(' ')
 
   return (
-    <Box className={classNames}>
+    <Box
+      className={classNames}
+      onClick={() => {
+        navigate('/')
+      }}
+    >
       {(isFull && !props.alwaysSmall) || props.alwaysFull ? (
         (colorScheme === 'dark' && !props.alwaysLight) || props.alwaysDark ? (
           <Image

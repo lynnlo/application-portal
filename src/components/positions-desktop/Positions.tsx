@@ -3,11 +3,11 @@ import { Center, Grid, Box, Title, Flex } from '@mantine/core'
 
 import Card from '../card/Card'
 import { Filters } from '../filters/Filters'
-import { Filter, data, Position } from '../../data/positions'
+import { Filter, Position } from '../../data/positions'
 
 import classes from './Positions.module.css'
 
-export const PositionsDesktop = () => {
+export const PositionsDesktop = ({ data }: { data: Position[] }) => {
   const [filter, setFilter] = React.useState<Filter>({
     search: '',
     jobType: [],
@@ -27,13 +27,16 @@ export const PositionsDesktop = () => {
         (item: Position) =>
           filter.jobLocation.length === 0 || filter.jobLocation.includes(item.location),
       )
-      .filter((item) => filter.jobType.length === 0 || filter.jobType.includes(item.jobType))
       .filter(
-        (item) => filter.jobCategory.length === 0 || filter.jobCategory.includes(item.jobCategory),
+        (item: Position) => filter.jobType.length === 0 || filter.jobType.includes(item.jobType),
       )
       .filter(
         (item: Position) =>
-          item.salary[0] >= filter.salaryRange[0] && item.salary[1] <= filter.salaryRange[1],
+          filter.jobCategory.length === 0 || filter.jobCategory.includes(item.jobCategory),
+      )
+      .filter(
+        (item: Position) =>
+          item.salary0 >= filter.salaryRange[0] && item.salary1 <= filter.salaryRange[1],
       )
 
     return new_data

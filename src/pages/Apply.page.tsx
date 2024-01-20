@@ -5,6 +5,8 @@ import { Box, Center, Container } from '@mantine/core'
 import { Apply } from '../components/apply/Apply'
 
 export function ApplyPage() {
+  const location = useLocation()
+
   return (
     <>
       <Center h="100%">

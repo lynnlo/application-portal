@@ -10,15 +10,25 @@ import {
   Box,
   Group,
   Checkbox,
-  Center,
   Container,
   Space,
 } from '@mantine/core'
 import { Link } from 'react-router-dom'
+import { UseFormReturnType, Form } from '@mantine/form'
 
 import classes from './Register.module.css'
 
-export const Register = () => {
+export interface RegisterProps {
+  form: UseFormReturnType<{
+    email: string
+    password: string
+    name: string
+  }>
+  handleRegister: () => void
+  error: string | null
+}
+
+export const Register = ({ form, handleRegister, error }: RegisterProps) => {
   return (
     <Container fluid>
       <Title ta="center"> Welcome To Grecco </Title>
@@ -29,21 +39,23 @@ export const Register = () => {
         </Link>
       </Text>
       <Space h="lg" />
-      <Center>
+      <Form form={form}>
         <Paper w={360} p="lg" shadow="md" radius="md" withBorder>
           <Stack>
-            <TextInput label="Name" required />
-            <TextInput label="Email" required />
-            <PasswordInput label="Password" required />
+            <TextInput {...form.getInputProps('email')} label="Email" required />
+            <PasswordInput {...form.getInputProps('password')} label="Password" required />
             <Group gap="sm" justify="space-between">
               <Checkbox label="Remember me" />
             </Group>
-            <Button type="submit" radius="lg" fullWidth>
+            <Button type="submit" radius="lg" fullWidth onClick={handleRegister}>
               Sign Up
             </Button>
           </Stack>
+          <Text c="red" mt="sm">
+            {error}
+          </Text>
         </Paper>
-      </Center>
+      </Form>
     </Container>
   )
 }
