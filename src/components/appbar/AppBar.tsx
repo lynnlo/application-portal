@@ -153,25 +153,43 @@ export default function AppBarComponent() {
               </Button>
             </Stack>
             <Stack>
-              <Button
-                variant="outline"
-                color="light"
-                onClick={() => {
-                  setOpened(false)
-                  navigate('login', { state: { register: true } })
-                }}
-              >
-                Register
-              </Button>
-              <Button
-                color="blue"
-                onClick={() => {
-                  setOpened(false)
-                  navigate('login', { state: { register: false } })
-                }}
-              >
-                Login
-              </Button>
+              {user ? (
+                <>
+                  <Button
+                    variant="subtle"
+                    color="grey"
+                    onClick={() => {
+                      supabase.auth.signOut()
+                      setUser(undefined)
+                      setOpened(false)
+                    }}
+                  >
+                    Log Out
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    variant="outline"
+                    color="light"
+                    onClick={() => {
+                      navigate('login', { state: { register: true } })
+                      setOpened(false)
+                    }}
+                  >
+                    Register
+                  </Button>
+                  <Button
+                    color="blue"
+                    onClick={() => {
+                      navigate('login', { state: { register: false } })
+                      setOpened(false)
+                    }}
+                  >
+                    Login
+                  </Button>
+                </>
+              )}
               <Text ta="center" size="xs" hiddenFrom="sm">
                 © 2024 Grecco Co.
               </Text>
