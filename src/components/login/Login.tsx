@@ -29,7 +29,7 @@ export const Login = () => {
         </Link>
       </Text>
       <Space h="lg" />
-      <Login>
+      <Center>
         <Paper w={360} p="lg" shadow="md" radius="md" withBorder>
           <Stack>
             <TextInput label="Email" required />
@@ -45,7 +45,7 @@ export const Login = () => {
             </Button>
           </Stack>
         </Paper>
-      </Login>
+      </Center>
     </Container>
   )
 }

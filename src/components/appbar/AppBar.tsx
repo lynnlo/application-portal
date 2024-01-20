@@ -3,7 +3,7 @@ import { Box, Group, Button, useMantineColorScheme, ActionIcon, Text } from '@ma
 
 import { Link, useNavigate } from 'react-router-dom'
 
-import { IconBrightnessDown } from '@tabler/icons-react'
+import { IconBrightnessDown, IconMenu2, IconStack } from '@tabler/icons-react'
 
 import classes from './AppBar.module.css'
 import Logo from '../logo/Logo'
@@ -58,6 +58,13 @@ export default function AppBarComponent() {
             >
               Register
             </Button>
+          </Group>
+
+          {/* Mobile */}
+          <Group hiddenFrom="md">
+            <ActionIcon variant="subtle" color="light">
+              <IconMenu2 />
+            </ActionIcon>
           </Group>
         </Group>
       </header>

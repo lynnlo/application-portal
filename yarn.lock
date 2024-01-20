@@ -1552,6 +1552,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
+  version: 7.23.8
+  resolution: "@babel/runtime@npm:7.23.8"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: ba5e8fbb32ef04f6cab5e89c54a0497c2fde7b730595cc1af93496270314f13ff2c6a9360fdb2f0bdd4d6b376752ce3cf85642bd6b876969a6a62954934c2df8
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.15":
   version: 7.22.15
   resolution: "@babel/template@npm:7.22.15"
@@ -2311,12 +2320,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:^7.3.2":
-  version: 7.4.0
-  resolution: "@mantine/hooks@npm:7.4.0"
+"@mantine/dates@npm:^7.4.2":
+  version: 7.4.2
+  resolution: "@mantine/dates@npm:7.4.2"
+  dependencies:
+    clsx: "npm:2.0.0"
+  peerDependencies:
+    "@mantine/core": 7.4.2
+    "@mantine/hooks": 7.4.2
+    dayjs: ">=1.0.0"
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 0592489d8fb45737269b79167d456b35b2a88ee7239d1a7afdddc01c0d42b2f70e4a1e07ee6241aa734e22c8f44787b8c3687fb5030ee1f1875537bcdbc823c0
+  languageName: node
+  linkType: hard
+
+"@mantine/dropzone@npm:^7.4.2":
+  version: 7.4.2
+  resolution: "@mantine/dropzone@npm:7.4.2"
+  dependencies:
+    react-dropzone-esm: "npm:15.0.1"
+  peerDependencies:
+    "@mantine/core": 7.4.2
+    "@mantine/hooks": 7.4.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: acf8be21e79d45468e494d5fc5ed5588cbffbd4775fa42fbcd24ce539c791c082258edf6dedbec9c96fc4250dcb2a90381e6ab4d427fbf8c7cb0b997776d84cb
+  languageName: node
+  linkType: hard
+
+"@mantine/hooks@npm:^7.4.0":
+  version: 7.4.2
+  resolution: "@mantine/hooks@npm:7.4.2"
   peerDependencies:
     react: ^18.2.0
-  checksum: 6d38ba6cbe05594ef3df5e350bc31985b2f72ec05613cf81d3c83f9d0e8bc48564b1cfa0639886460c7ed476f8be67a9b587e8e79486ded9cd93e53a533d36d2
+  checksum: 76cc1a0764161280814b7885ef6b744f61f41134c0efb02a56b326b2b62d3a7ef3f388fb5a21131058e32b6ecc6963ae873e105edee1f9a30f8aa78cdb8a7d7c
   languageName: node
   linkType: hard
 
@@ -4440,6 +4478,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-transition-group@npm:^4":
+  version: 4.4.10
+  resolution: "@types/react-transition-group@npm:4.4.10"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 3eb9bca143abc21eb781aa5cb1bded0c9335689d515bf0513fb8e63217b7a8122c6a323ecd5644a06938727e1f467ee061d8df1c93b68825a80ff1b47ab777a2
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:^18.2.36":
   version: 18.2.37
   resolution: "@types/react@npm:18.2.37"
@@ -5964,6 +6011,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dayjs@npm:^1.11.10":
+  version: 1.11.10
+  resolution: "dayjs@npm:1.11.10"
+  checksum: 4de9af50639d47df87f2e15fa36bb07e0f9ed1e9c52c6caa1482788ee9a384d668f1dbd00c54f82aaab163db07d61d2899384b8254da3a9184fc6deca080e2fe
+  languageName: node
+  linkType: hard
+
 "debug@npm:2.6.9, debug@npm:^2.6.9":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -6216,6 +6270,16 @@ __metadata:
   version: 0.5.16
   resolution: "dom-accessibility-api@npm:0.5.16"
   checksum: b2c2eda4fae568977cdac27a9f0c001edf4f95a6a6191dfa611e3721db2478d1badc01db5bb4fa8a848aeee13e442a6c2a4386d65ec65a1436f24715a2f8d053
+  languageName: node
+  linkType: hard
+
+"dom-helpers@npm:^5.0.1":
+  version: 5.2.1
+  resolution: "dom-helpers@npm:5.2.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.8.7"
+    csstype: "npm:^3.0.2"
+  checksum: f735074d66dd759b36b158fa26e9d00c9388ee0e8c9b16af941c38f014a37fc80782de83afefd621681b19ac0501034b4f1c4a3bff5caa1b8667f0212b5e124c
   languageName: node
   linkType: hard
 
@@ -9075,7 +9139,9 @@ __metadata:
   dependencies:
     "@mantine/carousel": "npm:^7.4.0"
     "@mantine/core": "npm:^7.3.2"
-    "@mantine/hooks": "npm:^7.3.2"
+    "@mantine/dates": "npm:^7.4.2"
+    "@mantine/dropzone": "npm:^7.4.2"
+    "@mantine/hooks": "npm:^7.4.0"
     "@storybook/addon-essentials": "npm:^7.6.6"
     "@storybook/addon-interactions": "npm:^7.6.6"
     "@storybook/addon-links": "npm:^7.6.6"
@@ -9090,9 +9156,11 @@ __metadata:
     "@testing-library/user-event": "npm:^14.5.1"
     "@types/react": "npm:^18.2.36"
     "@types/react-dom": "npm:^18.2.14"
+    "@types/react-transition-group": "npm:^4"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
     "@typescript-eslint/parser": "npm:^6.9.1"
     "@vitejs/plugin-react": "npm:^4.2.1"
+    dayjs: "npm:^1.11.10"
     embla-carousel-react: "npm:7.1.0"
     eslint: "npm:^8.53.0"
     eslint-config-airbnb: "npm:19.0.4"
@@ -9113,6 +9181,7 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:^6.21.0"
     react-scroll-parallax: "npm:^3.4.5"
+    react-transition-group: "npm:^4.4.5"
     storybook: "npm:^7.6.6"
     storybook-dark-mode: "npm:^3.0.3"
     stylelint: "npm:^16.0.2"
@@ -10325,7 +10394,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10523,6 +10592,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-dropzone-esm@npm:15.0.1":
+  version: 15.0.1
+  resolution: "react-dropzone-esm@npm:15.0.1"
+  dependencies:
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ">= 16.8 || 18.0.0"
+  checksum: 4bd7054a78a9d8b98d13f0abfbdec334e647c681ccb62c5c38fce72e1bace4cdb7d5eb22675ab2ce63f6cca11ec40c0e2081a28a725a38f331cf930abb170e7d
+  languageName: node
+  linkType: hard
+
 "react-element-to-jsx-string@npm:^15.0.0":
   version: 15.0.0
   resolution: "react-element-to-jsx-string@npm:15.0.0"
@@ -10701,6 +10781,21 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
   checksum: 33d38a6d96cf584842695b50c341980944ece23a42155bf0bd1958f02396adb185c7720b88678dc677817fe111783059c0ebcdf7761644006892583b10e258ee
+  languageName: node
+  linkType: hard
+
+"react-transition-group@npm:^4.4.5":
+  version: 4.4.5
+  resolution: "react-transition-group@npm:4.4.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.5.5"
+    dom-helpers: "npm:^5.0.1"
+    loose-envify: "npm:^1.4.0"
+    prop-types: "npm:^15.6.2"
+  peerDependencies:
+    react: ">=16.6.0"
+    react-dom: ">=16.6.0"
+  checksum: 2ba754ba748faefa15f87c96dfa700d5525054a0141de8c75763aae6734af0740e77e11261a1e8f4ffc08fd9ab78510122e05c21c2d79066c38bb6861a886c82
   languageName: node
   linkType: hard
 
