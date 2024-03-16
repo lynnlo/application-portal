@@ -4424,6 +4424,8 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.9.1"
     "@vitejs/plugin-react": "npm:^4.2.1"
     dayjs: "npm:^1.11.10"
+    embla-carousel-auto-scroll: "npm:^8.0.0"
+    embla-carousel-autoplay: "npm:7.1.0"
     embla-carousel-react: "npm:7.1.0"
     eslint: "npm:^8.53.0"
     eslint-config-airbnb: "npm:19.0.4"
@@ -5730,6 +5732,24 @@ __metadata:
   version: 1.4.615
   resolution: "electron-to-chromium@npm:1.4.615"
   checksum: 6602172761e44ca1a6c010a010efd0c42710e1e08911e76dd2d3df72ae2a563fb75b0853387273d1e45a4befd314162b2b1debcf9055513f62c6d6a8df4de73a
+  languageName: node
+  linkType: hard
+
+"embla-carousel-auto-scroll@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "embla-carousel-auto-scroll@npm:8.0.0"
+  peerDependencies:
+    embla-carousel: 8.0.0
+  checksum: af9ae084a0c99f81a47bc9ee05ec32b44d5493465e98ef3f4a44b949d58a64019cbd794c97aa309db8104fe536516c78f4f310f7b0b2a931a0d8530292799e7f
+  languageName: node
+  linkType: hard
+
+"embla-carousel-autoplay@npm:7.1.0":
+  version: 7.1.0
+  resolution: "embla-carousel-autoplay@npm:7.1.0"
+  peerDependencies:
+    embla-carousel: 7.1.0
+  checksum: 27b80fceee448c6e62144d68cd474f62d388feb93f61adcb00e4a12c80595235cd0e865e3dd305eef28591bfc5ffd40181aa8fa29ce6f85bd3331fecada071bc
   languageName: node
   linkType: hard
 

@@ -1,20 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
-import { Box, Center, Title, Text, Stack, Paper } from '@mantine/core'
-
-import AppBar from '../components/appbar/AppBar'
-
-import { Filter, data, Position } from '../data/positions'
+import { Center, Flex } from '@mantine/core'
+import { About } from '../components/about/About'
+import { Hero } from '../components/hero/Hero'
 
 export function AboutPage() {
   return (
     <>
-      <Paper p="lg" withBorder shadow="lg">
-        <Title>About</Title>
-        <Text>
-          We're a small company that's focused on bring people the best coffee at a fair price.
-        </Text>
-      </Paper>
+      <Center h="100%">
+        <Flex direction="row" align="center" justify="center">
+          <Hero />
+          <About />
+        </Flex>
+      </Center>
     </>
   )
 }

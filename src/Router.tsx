@@ -1,5 +1,5 @@
 import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
-import { AppShell } from '@mantine/core'
+import { AppShell, Flex, Overlay, Text } from '@mantine/core'
 
 import { HomePage } from './pages/Home.page'
 import { PositionsPage } from './pages/Positions.page'
@@ -13,7 +13,7 @@ export function Router() {
   return (
     <BrowserRouter>
       <AppShell header={{ height: '8vh' }} w="100vw" h="100vh" display="flex">
-        <AppShell.Header>
+        <AppShell.Header withBorder>
           <AppBar />
         </AppShell.Header>
         <AppShell.Main w="100vw">
@@ -25,6 +25,13 @@ export function Router() {
             <Route path="/apply/:jobId" element={<ApplyPage />} />
           </Routes>
         </AppShell.Main>
+        <AppShell.Footer withBorder={false}>
+          <Flex direction="column" mih="100%" align="center" justify="end" visibleFrom="sm">
+            <Text m="md" size="sm" style={{ color: 'gray' }}>
+              © 2024 Greco Co. All rights reserved.
+            </Text>
+          </Flex>
+        </AppShell.Footer>
       </AppShell>
     </BrowserRouter>
   )
