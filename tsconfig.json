@@ -14,10 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@test-utils": ["./test-utils"]
-    }
+    "jsx": "react-jsx"
   },
-  "include": ["src", "test-utils"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

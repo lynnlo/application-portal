@@ -1,25 +1,8 @@
-.benefit {
+.section {
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  height: 30vh;
-}
-
-.background_image {
-  width: 100%;
-  margin: 0;
-  object-fit: cover;
-  filter: light-dark(saturate(20%), brightness(20%) saturate(20%));
-}
-
-.parallax {
-  position: absolute;
-  width: 100%;
-}
-
-.double_box {
-  display: flex;
   align-items: center;
-  justify-content: center;
+  height: 92vh;
+  width: 92vw;
+  overflow: hidden;
 }
