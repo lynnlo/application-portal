@@ -12,11 +12,11 @@ import AppBar from './components/appbar/AppBar'
 export function Router() {
   return (
     <BrowserRouter>
-      <AppShell header={{ height: '8vh' }} w="100vw" h="100vh" display="flex">
+      <AppShell>
         <AppShell.Header withBorder>
           <AppBar />
         </AppShell.Header>
-        <AppShell.Main w="100vw">
+        <AppShell.Main pt="8vh">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/positions" element={<PositionsPage />} />
@@ -25,9 +25,9 @@ export function Router() {
             <Route path="/apply/:jobId" element={<ApplyPage />} />
           </Routes>
         </AppShell.Main>
-        <AppShell.Footer withBorder={false}>
+        <AppShell.Footer withBorder={false} bg="transparent">
           <Flex direction="column" mih="100%" align="center" justify="end" visibleFrom="sm">
-            <Text m="md" size="sm" style={{ color: 'gray' }}>
+            <Text m="md" size="sm">
               © 2024 Greco Co. All rights reserved.
             </Text>
           </Flex>

@@ -101,7 +101,6 @@ export default function AppBarComponent() {
 
           {/* Mobile */}
           <Group hiddenFrom="md">
-            
             <ActionIcon
               variant="subtle"
               color="light"

@@ -8,10 +8,10 @@ import { theme } from './theme'
 
 export default function App() {
   return (
-    <ParallaxProvider>
-      <MantineProvider theme={theme}>
+    <MantineProvider theme={theme}>
+      <ParallaxProvider>
         <Router />
-      </MantineProvider>
-    </ParallaxProvider>
+      </ParallaxProvider>
+    </MantineProvider>
   )
 }

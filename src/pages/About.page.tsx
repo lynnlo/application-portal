@@ -7,12 +7,7 @@ import { Hero } from '../components/hero/Hero'
 export function AboutPage() {
   return (
     <>
-      <Center h="100%">
-        <Flex direction="row" align="center" justify="center">
-          <Hero />
-          <About />
-        </Flex>
-      </Center>
+      <About />
     </>
   )
 }
