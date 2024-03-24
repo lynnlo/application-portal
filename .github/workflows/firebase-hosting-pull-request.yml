@@ -8,14 +8,10 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
       - uses: actions/checkout@v3
 
-      - name: pnpm-setup
       - uses: pnpm/action-setup@v2
 
-      - name: deploy
-      - uses: actions/checkout@v2
       - run: pnpm i && pnpm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
