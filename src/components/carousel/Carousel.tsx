@@ -4,10 +4,10 @@ import { Button, Center, Flex, Image, Overlay, Stack, Text, Title } from '@manti
 import Autoplay from 'embla-carousel-autoplay'
 import { Parallax } from 'react-scroll-parallax'
 
-import image1 from './image-1.jpg'
-import image2 from './image-2.jpg'
-import image3 from './image-3.jpg'
-import image4 from './image-4.jpg'
+import image1 from '../../data/image-1.jpg'
+import image2 from '../../data/image-2.jpg'
+import image3 from '../../data/image-3.jpg'
+import image4 from '../../data/image-4.jpg'
 import Logo from '../logo/Logo'
 
 const images = [
@@ -30,7 +30,7 @@ const images = [
 const imageSlides = images.map((image, index) => (
   <Carousel.Slide key={index}>
     <Image src={image.image} fit="cover" alt={image.alt} width="100%" height="100%" />
-    <Overlay w="calc(60vw - 2%)" backgroundOpacity={0.4} />
+    <Overlay backgroundOpacity={0.4} />
   </Carousel.Slide>
 ))
 
@@ -43,26 +43,25 @@ export default function CarouselComponent() {
         draggable={false}
         plugins={[autoplay.current]}
         align="center"
-        height="70vh"
+        height="92vh"
         loop
-        slideGap="2%"
-        slideSize="60%"
+        slideSize="100%"
       >
         {imageSlides}
       </Carousel>
-      <Overlay backgroundOpacity={0} mt="8vh" h="70vh" zIndex={0}>
+      <Overlay backgroundOpacity={0} mt="8vh" h="92vh" zIndex={0}>
         <Flex align="center" justify="center" direction="column" h="100%">
           <Parallax speed={-10}>
             <Title
               ta="center"
-              size="10vw"
+              size="5vw"
               style={{
                 color: 'white',
                 opacity: 0.7,
                 userSelect: 'none',
               }}
             >
-              Grecco Coffee
+              Careers at Grecco Coffee
             </Title>
           </Parallax>
         </Flex>

@@ -9,8 +9,6 @@ export function HomePage() {
     <>
       <Carousel />
       <Benefits />
-      <Benefits />
-      <Benefits />
     </>
   )
 }

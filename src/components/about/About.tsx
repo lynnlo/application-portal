@@ -15,17 +15,14 @@ import {
 import { Link, Form } from 'react-router-dom'
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 
+import image2 from '../../data/image-2.jpg'
 import classes from './About.module.css'
 
 export const About = () => {
   return (
     <Flex direction="column" align="center">
       <section className={classes.section}>
-        <BackgroundImage
-          src="https://images.unsplash.com/photo-1705651460817-ebfa8c213979?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          h="100%"
-          w="100%"
-        >
+        <BackgroundImage src={image2} h="100%" w="100%">
           <Flex w="100%" h="100%" align="center" justify="center" bg="#0005">
             <Container size="xl">
               <Parallax speed={20}>

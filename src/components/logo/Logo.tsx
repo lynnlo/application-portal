@@ -3,10 +3,10 @@ import { Box, Group, Image, useMantineColorScheme, getBreakpointValue } from '@m
 import { useNavigate } from 'react-router-dom'
 import { useMediaQuery } from '@mantine/hooks'
 
-import logo_mobile_dark from './grecco_logo_mobile.png'
-import logo_desktop_dark from './grecco_logo_desktop.png'
-import logo_mobile_light from './grecco_logo_mobile_light.png'
-import logo_desktop_light from './grecco_logo_desktop_light.png'
+import logo_mobile_dark from '../../data/grecco_logo_mobile.png'
+import logo_desktop_dark from '../../data/grecco_logo_desktop.png'
+import logo_mobile_light from '../../data/grecco_logo_mobile_light.png'
+import logo_desktop_light from '../../data/grecco_logo_desktop_light.png'
 
 import classes from './Logo.module.css'
 
