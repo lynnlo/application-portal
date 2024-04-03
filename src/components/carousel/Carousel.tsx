@@ -4,10 +4,10 @@ import { Button, Center, Flex, Image, Overlay, Stack, Text, Title } from '@manti
 import Autoplay from 'embla-carousel-autoplay'
 import { Parallax } from 'react-scroll-parallax'
 
-import image1 from '../../data/image-1.jpg'
-import image2 from '../../data/image-2.jpg'
-import image3 from '../../data/image-3.jpg'
-import image4 from '../../data/image-4.jpg'
+import image1 from '../../data/image-meeting-room.jpg'
+import image2 from '../../data/image-coffee-pour.jpg'
+import image3 from '../../data/image-cash.jpg'
+import image4 from '../../data/image-coffee-share.jpg'
 import Logo from '../logo/Logo'
 
 const images = [
@@ -29,7 +29,14 @@ const images = [
 ]
 const imageSlides = images.map((image, index) => (
   <Carousel.Slide key={index}>
-    <Image src={image.image} fit="cover" alt={image.alt} width="100%" height="100%" />
+    <Image
+      src={image.image}
+      loading="lazy"
+      fit="cover"
+      alt={image.alt}
+      width="100%"
+      height="100%"
+    />
     <Overlay backgroundOpacity={0.4} />
   </Carousel.Slide>
 ))
