@@ -1,5 +1,5 @@
 import React from 'react'
-import { Center, Grid, Box, Title, Flex } from '@mantine/core'
+import { Center, Grid, Box, Title, Flex, Loader, Text, Stack } from '@mantine/core'
 
 import Card from '../card/Card'
 import { Filters } from '../filters/Filters'
@@ -59,6 +59,14 @@ export const PositionsDesktop = ({ data }: { data: Position[] }) => {
               <Grid.Col span={12}>
                 <Center>
                   <Flex direction="row" wrap="wrap" w="100%">
+                    {data.length === 0 && (
+                      <Center w="100%" h="50vh">
+                        <Stack>
+                          <Loader size="xl" />
+                          <Text>Loading...</Text>
+                        </Stack>
+                      </Center>
+                    )}
                     {get_filtered_data().map((item, index) => (
                       <Card key={index} {...item} />
                     ))}
