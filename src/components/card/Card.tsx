@@ -12,6 +12,14 @@ import {
   ActionIcon,
 } from '@mantine/core'
 import { useNavigate } from 'react-router-dom'
+import {
+  IconBriefcase,
+  IconClock,
+  IconLocation,
+  IconLocationPin,
+  IconMapPin,
+  IconPin,
+} from '@tabler/icons-react'
 
 import { Position } from '../../data/positions'
 import classes from './Card.module.css'
@@ -21,29 +29,22 @@ export default function CardComponent(props: Position) {
 
   return (
     <Box className={classes.box}>
-      <Paper className={classes.card} p="md" withBorder shadow="lg">
-        <Stack h="60%" gap={0}>
-          <Space h="10%" />
-          <Title size="1vw">{props.position}</Title>
+      <Paper className={classes.card} p="lg" withBorder shadow="lg">
+        <Group gap={5}>
+          <Title order={4}>{props.position}</Title>
           <Text size="sm">
-            {props.location} · {props.jobType}
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eos?
           </Text>
-          <Text size="sm">{`${props.salary0}k - ${props.salary1}k`}</Text>
-        </Stack>
-        <Group h="40%" align="end" justify="end" gap={0}>
-          <Button
-            variant="gradient"
-            gradient={{
-              from: 'blue',
-              to: 'cyan',
-              deg: 140,
-            }}
-            size="sm"
-            type="submit"
-            onClick={() => navigate(`/apply/${props.position}`)}
-          >
-            Apply Now
-          </Button>
+        </Group>
+        <Group>
+          <Group gap={5}>
+            <IconBriefcase size={30} />
+            <Text size="sm">{true ? 'Full-time' : 'Part-time'}</Text>
+          </Group>
+          <Group gap={5}>
+            <IconMapPin />
+            <Text size="sm">{props.location}</Text>
+          </Group>
         </Group>
       </Paper>
     </Box>

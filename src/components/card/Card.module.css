@@ -1,14 +1,27 @@
 .box {
-  padding: 0.5em;
-  width: calc(100% / 4);
+  padding: 1em;
+  width: calc(100% / 5);
+
+  @media (max-width: 1920px) {
+    width: calc(100% / 3);
+  }
+
+  @media (max-width: 1200px) {
+    width: calc(100% / 2);
+  }
 }
 
 .card {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 4;
   height: 100%;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 0.25em;
   transition: transform 0.1s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @mixin hover {
     &:hover {
