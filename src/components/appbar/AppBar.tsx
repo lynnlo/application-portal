@@ -58,7 +58,12 @@ export default function AppBarComponent() {
             top="0vh"
             bg="var(--mantine-color-body)"
             p={20}
-            style={{ borderRadius: '100%', aspectRatio: '1/1' }}
+            style={{
+              borderRadius: '100%',
+              aspectRatio: '1/1',
+              borderBottom:
+                'calc(0.0625rem* var(--mantine-scale)) solid var(--_app-shell-border-color)',
+            }}
             visibleFrom="md"
           >
             <Logo alwaysSmall style={{ width: '8vh', height: '8vh' }} />
@@ -75,7 +80,7 @@ export default function AppBarComponent() {
 
             {user ? (
               <>
-                <Text> Welcome {user.phone} </Text>
+                <Text> {user.email} </Text>
                 <Button
                   variant="subtle"
                   color="grey"
@@ -138,7 +143,7 @@ export default function AppBarComponent() {
             onClose={() => {
               setOpened(false)
             }}
-            title={<Title order={3}> Grecco Co. Careers </Title>}
+            title="Grecco Co. Careers"
           >
             <Stack justify="space-between" h="90vh">
               <Stack gap="md" align="start">

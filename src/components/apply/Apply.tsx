@@ -26,7 +26,7 @@ import dayjs from 'dayjs'
 
 import supabase from '../../supabase'
 
-import './Apply.css'
+import './Apply.module.css'
 
 export const Apply = () => {
   const navigate = useNavigate()
@@ -99,6 +99,8 @@ export const Apply = () => {
 
   return (
     <Container fluid>
+      <Title order={1}> Application </Title>
+      <Space h="lg" />
       <Stepper active={activeStep}>
         <Stepper.Step>Personal Info</Stepper.Step>
         <Stepper.Step>Application</Stepper.Step>

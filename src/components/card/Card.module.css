@@ -16,17 +16,19 @@
   height: 100%;
   width: 100%;
   border-radius: 0.25em;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @mixin hover {
-    &:hover {
-      position: static;
-      transform: scale(1.05);
-    }
+  &:hover {
+    position: static;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }

@@ -42,7 +42,7 @@ export const Register = ({ form, handleRegister, error }: RegisterProps) => {
       <Form form={form}>
         <Paper w={360} p="lg" shadow="md" radius="md" withBorder>
           <Stack>
-            <TextInput {...form.getInputProps('email')} label="Email" required />
+            <TextInput {...form.getInputProps('email')} label="Email" type="email" required />
             <PasswordInput {...form.getInputProps('password')} label="Password" required />
             <Group gap="sm" justify="space-between">
               <Checkbox label="Remember me" />

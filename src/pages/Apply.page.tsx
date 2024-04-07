@@ -9,7 +9,7 @@ export function ApplyPage() {
 
   return (
     <>
-      <Center h="100%">
+      <Center h="94vh">
         <Apply />
       </Center>
     </>

@@ -61,7 +61,7 @@ export default function CarouselComponent() {
           <Parallax speed={-10}>
             <Title
               ta="center"
-              size="5vw"
+              size="max(4vw, 5vh)"
               style={{
                 color: 'white',
                 opacity: 0.7,

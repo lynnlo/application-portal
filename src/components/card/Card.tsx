@@ -31,7 +31,15 @@ export default function CardComponent(props: Position) {
 
   return (
     <Box className={classes.box}>
-      <Paper className={classes.card} p="lg" withBorder shadow="lg">
+      <Paper
+        className={classes.card}
+        p="lg"
+        withBorder
+        shadow="lg"
+        onClick={() => {
+          setTimeout(() => navigate(`/apply/${props.position}`), 150)
+        }}
+      >
         <Group>
           <Text size="sm">{props.jobCategory}</Text>
           <Group gap={5}>
