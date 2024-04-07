@@ -6,6 +6,7 @@ import { PositionsPage } from './pages/Positions.page'
 import { AboutPage } from './pages/About.page'
 import { LoginPage } from './pages/Login.page'
 import { ApplyPage } from './pages/Apply.page'
+import { ForgotPage } from './pages/Forgot.page'
 
 import AppBar from './components/appbar/AppBar'
 
@@ -22,6 +23,7 @@ export function Router() {
             <Route path="/positions" element={<PositionsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/forgot-password" element={<ForgotPage />} />
             <Route path="/apply/:jobId" element={<ApplyPage />} />
           </Routes>
         </AppShell.Main>

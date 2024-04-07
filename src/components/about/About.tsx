@@ -24,7 +24,7 @@ export const About = () => {
   return (
     <Flex direction="column" align="center">
       <section className={classes.section}>
-        <BackgroundImage src="images/image-coffee-pour.jpg.webp" h="100%" w="100%">
+        <BackgroundImage src="images/image-coffee-pour.jpg" h="100%" w="100%">
           <Flex w="100%" h="100%" align="center" justify="center" bg="#0005">
             <Container size="xl">
               <Parallax speed={20}>
@@ -65,8 +65,8 @@ export const About = () => {
           <BackgroundImage
             src={
               colorScheme === 'dark'
-                ? 'images/image-journey-start.png.webp'
-                : 'images/image-journey-start-light.png.webp'
+                ? 'images/image-journey-start.png'
+                : 'images/image-journey-start-light.png'
             }
             pb="15em"
             h="100%"
@@ -88,7 +88,7 @@ export const About = () => {
                   <AspectRatio ratio={1} w="35vw">
                     <img
                       alt="Arizona landscape with cactus and bushes"
-                      src="images/image-arizona-landscape.jpg.webp"
+                      src="images/image-arizona-landscape.jpg"
                     />
                   </AspectRatio>
                 </Parallax>
@@ -100,8 +100,8 @@ export const About = () => {
           <BackgroundImage
             src={
               colorScheme === 'dark'
-                ? 'images/image-journey-middle.png.webp'
-                : 'images/image-journey-middle-light.png.webp'
+                ? 'images/image-journey-middle.png'
+                : 'images/image-journey-middle-light.png'
             }
             pb="15em"
             h="100%"
@@ -113,7 +113,7 @@ export const About = () => {
                   <AspectRatio ratio={1} w="35vw">
                     <img
                       alt="A busy coffee shop with people working"
-                      src="images/image-coffee-team.jpg.webp"
+                      src="images/image-coffee-team.jpg"
                     />
                   </AspectRatio>
                 </Parallax>
@@ -135,8 +135,8 @@ export const About = () => {
           <BackgroundImage
             src={
               colorScheme === 'dark'
-                ? 'images/image-journey-end.png.webp'
-                : 'images/image-journey-end-light.png.webp'
+                ? 'images/image-journey-end.png'
+                : 'images/image-journey-end-light.png'
             }
             h="100%"
             w="100%"
@@ -169,7 +169,7 @@ export const About = () => {
       {/* Mobile */}
       <Group gap={0} hiddenFrom="lg">
         <section className={classes.section}>
-          <BackgroundImage src="images/image-arizona-landscape.jpg.webp" h="100%" w="100%">
+          <BackgroundImage src="images/image-arizona-landscape.jpg" h="100%" w="100%">
             <Flex
               w="100%"
               h="100%"
