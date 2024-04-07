@@ -11,6 +11,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     'react/no-unescaped-entities': 'off',
     'arrow-body-style': 'off',
+    'linebreak-style': 'off',
     semi: 0,
   },
 }

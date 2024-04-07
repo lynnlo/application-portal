@@ -135,16 +135,23 @@ export const About = () => {
             h="100%"
             w="100%"
           >
-            <Flex w="100%" h="100%" align="center" justify="center">
+            <Flex w="100%" h="100%" mt="2em" align="center" justify="center">
               <Stack align="center" gap="lg">
                 <Title ta="center" order={1} size="4vw" w="40vw">
-                  Join Us
+                  You.
                 </Title>
                 <Text ta="center">
                   We're always looking for new team members who are passionate as we are about
                   coffee.
                 </Text>
-                <Button w="35%" component={Link} to="/positions">
+                <Button
+                  p="sm"
+                  px="xl"
+                  variant="gradient"
+                  component={Link}
+                  to="/positions"
+                  style={{ boxSizing: 'content-box' }}
+                >
                   View Open Positions
                 </Button>
               </Stack>
@@ -209,14 +216,21 @@ export const About = () => {
           <Flex w="100%" h="100%" align="center" justify="center">
             <Stack align="center" gap="lg">
               <Title ta="center" order={1} size="5vh" w="80vw">
-                Join Us
+                You.
               </Title>
               <Text ta="center" w="85vw">
                 We're always looking for new team members who are passionate as we are about coffee.
               </Text>
-              <Button w="65%" component={Link} to="/positions">
+              <Button
+                p="sm"
+                px="xl"
+                variant="gradient"
+                component={Link}
+                to="/positions"
+                style={{ boxSizing: 'content-box' }}
+              >
                 View Open Positions
-              </Button>s
+              </Button>
             </Stack>
           </Flex>
         </section>
