@@ -3,6 +3,7 @@
 
   [plugins.inputs]
   cloudName = "drqvqsvx2"
+  deliveryType = "upload"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
