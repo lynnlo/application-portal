@@ -3,6 +3,7 @@
 
   [plugins.inputs]
   cloudName = "<Your Cloud Name>"
+  imagesPath = "/src/data"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"

@@ -31,7 +31,6 @@ const imageSlides = images.map((image, index) => (
   <Carousel.Slide key={index}>
     <Image
       src={image.image}
-      loading="lazy"
       fit="cover"
       alt={image.alt}
       width="100%"
