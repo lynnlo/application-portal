@@ -2,7 +2,7 @@
   package = "netlify-plugin-cloudinary"
 
   [plugins.inputs]
-  cloudName = "<Your Cloud Name>"
+  cloudName = "drqvqsvx2"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
