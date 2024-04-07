@@ -8,17 +8,17 @@ import Logo from '../logo/Logo'
 
 const images = [
   {
-    image: 'images/image-coffee-share.jpg',
+    image: 'images/image-coffee-share.jpg.webp',
     caption: "Let's connect.",
     alt: 'Three coffee cups together.',
   },
   {
-    image: 'images/image-meeting-room.jpg',
+    image: 'images/image-meeting-room.jpg.webp',
     caption: 'Discover our work culture.',
     alt: 'A group of people in a meeting.',
   },
   {
-    image: 'images/image-coffee-pour.jpg',
+    image: 'images/image-coffee-pour.jpg.webp',
     caption: 'Did we mention free coffee?',
     alt: 'A person holding a coffee cup.',
   },

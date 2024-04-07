@@ -71,6 +71,7 @@ export default function AppBarComponent() {
 
           <Group justify="space-evenly">
             <ActionIcon
+              name="dark mode toggle"
               variant="subtle"
               color="light"
               onClick={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}
@@ -82,6 +83,7 @@ export default function AppBarComponent() {
               <>
                 <Text> {user.email} </Text>
                 <Button
+                  name="log out"
                   variant="subtle"
                   color="grey"
                   onClick={() => {
@@ -95,6 +97,7 @@ export default function AppBarComponent() {
             ) : (
               <>
                 <Button
+                  name="log in"
                   color="blue"
                   onClick={() => {
                     navigate('login', { state: { register: false } })
@@ -104,6 +107,7 @@ export default function AppBarComponent() {
                 </Button>
 
                 <Button
+                  name="register"
                   variant="outline"
                   color="light"
                   onClick={() => {
@@ -122,6 +126,7 @@ export default function AppBarComponent() {
           <Logo />
           <Group hiddenFrom="md">
             <ActionIcon
+              name="dark mode toggle"
               variant="subtle"
               color="light"
               onClick={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}
@@ -129,6 +134,7 @@ export default function AppBarComponent() {
               <IconBrightnessDown />
             </ActionIcon>
             <ActionIcon
+              name="open menu"
               variant="subtle"
               color="light"
               onClick={() => {
@@ -148,6 +154,7 @@ export default function AppBarComponent() {
             <Stack justify="space-between" h="90vh">
               <Stack gap="md" align="start">
                 <Button
+                  name="home page"
                   variant="subtle"
                   className={classes.link}
                   onClick={() => {
@@ -158,6 +165,7 @@ export default function AppBarComponent() {
                   <Text> Home </Text>
                 </Button>
                 <Button
+                  name="positions page"
                   variant="subtle"
                   className={classes.link}
                   onClick={() => {
@@ -168,6 +176,7 @@ export default function AppBarComponent() {
                   <Text> Positions </Text>
                 </Button>
                 <Button
+                  name="about page"
                   variant="subtle"
                   className={classes.link}
                   onClick={() => {
@@ -182,6 +191,7 @@ export default function AppBarComponent() {
                 {user ? (
                   <>
                     <Button
+                      name="log out"
                       variant="subtle"
                       color="grey"
                       onClick={() => {
@@ -196,6 +206,7 @@ export default function AppBarComponent() {
                 ) : (
                   <>
                     <Button
+                      name="register"
                       variant="outline"
                       color="light"
                       onClick={() => {
@@ -206,6 +217,7 @@ export default function AppBarComponent() {
                       Register
                     </Button>
                     <Button
+                      name="login"
                       color="blue"
                       onClick={() => {
                         navigate('login', { state: { register: false } })
