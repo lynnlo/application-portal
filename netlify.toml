@@ -1,12 +1,4 @@
 [[plugins]]
-package = "netlify-plugin-cloudinary"
-
-[plugins.inputs]
-cloudName = "drqvqsvx2"
-imagesPath = "/assets"
-deliveryType = "upload"
-
-[[plugins]]
 package = "@netlify/plugin-lighthouse"
 
 [plugins.inputs.audits]

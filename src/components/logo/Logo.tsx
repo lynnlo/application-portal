@@ -32,14 +32,14 @@ export default function Logo(props: LogoProps) {
       {(isFull && !props.alwaysSmall) || props.alwaysFull ? (
         (colorScheme === 'dark' && !props.alwaysLight) || props.alwaysDark ? (
           <Image
-            src="grecco_logo_desktop.png"
+            src="images/grecco_logo_desktop.png"
             width={props.width || 200}
             height={props.height || 70}
             style={props.style}
           />
         ) : (
           <Image
-            src="grecco_logo_desktop_light.png"
+            src="images/grecco_logo_desktop_light.png"
             width={props.width || 200}
             height={props.height || 70}
             style={props.style}
@@ -47,14 +47,14 @@ export default function Logo(props: LogoProps) {
         )
       ) : (colorScheme === 'dark' && !props.alwaysLight) || props.alwaysDark ? (
         <Image
-          src="grecco_logo_mobile.png"
+          src="images/grecco_logo_mobile.png"
           width={props.width || 200}
           height={props.height || 70}
           style={props.style}
         />
       ) : (
         <Image
-          src="grecco_logo_mobile_light.png"
+          src="images/grecco_logo_mobile_light.png"
           width={props.width || 200}
           height={props.height || 70}
           style={props.style}
