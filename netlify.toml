@@ -3,7 +3,8 @@
 
   [plugins.inputs]
   cloudName = "<Your Cloud Name>"
-  
+
+[[plugins]]
   package = "@netlify/plugin-lighthouse"
   
   [plugins.inputs.audits]
