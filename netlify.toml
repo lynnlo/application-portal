@@ -1,12 +1,13 @@
 [[plugins]]
-  package = "netlify-plugin-cloudinary"
+package = "netlify-plugin-cloudinary"
 
-  [plugins.inputs]
-  cloudName = "drqvqsvx2"
-  deliveryType = "upload"
+[plugins.inputs]
+cloudName = "drqvqsvx2"
+imagesPath = "/assets"
+deliveryType = "upload"
 
 [[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  
-  [plugins.inputs.audits]
-    output_path = "reports/lighthouse.html"
+package = "@netlify/plugin-lighthouse"
+
+[plugins.inputs.audits]
+output_path = "reports/lighthouse.html"
