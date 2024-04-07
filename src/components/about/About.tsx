@@ -16,15 +16,6 @@ import {
 import { Link, Form } from 'react-router-dom'
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 
-import ImageCoffeePour from '../../data/image-coffee-pour.jpg'
-import ImageArizonaLandscape from '../../data/image-arizona-landscape.jpg'
-import ImageCoffeeTeam from '../../data/image-coffee-team.jpg'
-import ImageJourneyStart from '../../data/image-journey-start.png'
-import ImageJourneyMiddle from '../../data/image-journey-middle.png'
-import ImageJourneyEnd from '../../data/image-journey-end.png'
-import ImageJourneyStartLight from '../../data/image-journey-start-light.png'
-import ImageJourneyMiddleLight from '../../data/image-journey-middle-light.png'
-import ImageJourneyEndLight from '../../data/image-journey-end-light.png'
 import classes from './About.module.css'
 
 export const About = () => {
@@ -33,7 +24,7 @@ export const About = () => {
   return (
     <Flex direction="column" align="center">
       <section className={classes.section}>
-        <BackgroundImage src={ImageCoffeePour} h="100%" w="100%">
+        <BackgroundImage src="image-coffee-pour.jpg" h="100%" w="100%">
           <Flex w="100%" h="100%" align="center" justify="center" bg="#0005">
             <Container size="xl">
               <Parallax speed={20}>
@@ -72,7 +63,9 @@ export const About = () => {
       <Group gap={0} visibleFrom="lg">
         <section className={classes.section}>
           <BackgroundImage
-            src={colorScheme === 'dark' ? ImageJourneyStart : ImageJourneyStartLight}
+            src={
+              colorScheme === 'dark' ? 'image-journey-start.png' : 'image-journey-start-light.png'
+            }
             pb="15em"
             h="100%"
             w="100%"
@@ -93,7 +86,7 @@ export const About = () => {
                   <AspectRatio ratio={1} w="35vw">
                     <img
                       alt="Arizona landscape with cactus and bushes"
-                      src={ImageArizonaLandscape}
+                      src="image-arizona-landscape.jpg"
                     />
                   </AspectRatio>
                 </Parallax>
@@ -103,7 +96,9 @@ export const About = () => {
         </section>
         <section className={classes.section}>
           <BackgroundImage
-            src={colorScheme === 'dark' ? ImageJourneyMiddle : ImageJourneyMiddleLight}
+            src={
+              colorScheme === 'dark' ? 'image-journey-middle.png' : 'image-journey-middle-light.png'
+            }
             pb="15em"
             h="100%"
             w="100%"
@@ -112,7 +107,7 @@ export const About = () => {
               <Container size="xl">
                 <Parallax speed={30}>
                   <AspectRatio ratio={1} w="35vw">
-                    <img alt="A busy coffee shop with people working" src={ImageCoffeeTeam} />
+                    <img alt="A busy coffee shop with people working" src="coffee-team.jpg" />
                   </AspectRatio>
                 </Parallax>
               </Container>
@@ -131,7 +126,7 @@ export const About = () => {
         </section>
         <section className={classes.section}>
           <BackgroundImage
-            src={colorScheme === 'dark' ? ImageJourneyEnd : ImageJourneyEndLight}
+            src={colorScheme === 'dark' ? 'image-journey-end.png' : 'image-journey-end-light.png'}
             h="100%"
             w="100%"
           >
@@ -163,7 +158,7 @@ export const About = () => {
       {/* Mobile */}
       <Group gap={0} hiddenFrom="lg">
         <section className={classes.section}>
-          <BackgroundImage src={ImageArizonaLandscape} h="100%" w="100%">
+          <BackgroundImage src="image-arizona-landscape.jpg" h="100%" w="100%">
             <Flex
               w="100%"
               h="100%"
@@ -188,7 +183,7 @@ export const About = () => {
           </BackgroundImage>
         </section>
         <section className={classes.section}>
-          <BackgroundImage src={ImageCoffeeTeam} h="100%" w="100%">
+          <BackgroundImage src="image-coffee-team" h="100%" w="100%">
             <Flex
               w="100%"
               h="100%"

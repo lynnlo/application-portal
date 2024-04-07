@@ -4,38 +4,28 @@ import { Button, Center, Flex, Image, Overlay, Stack, Text, Title } from '@manti
 import Autoplay from 'embla-carousel-autoplay'
 import { Parallax } from 'react-scroll-parallax'
 
-import image1 from '../../data/image-meeting-room.jpg'
-import image2 from '../../data/image-coffee-pour.jpg'
-import image3 from '../../data/image-cash.jpg'
-import image4 from '../../data/image-coffee-share.jpg'
 import Logo from '../logo/Logo'
 
 const images = [
   {
-    image: image4,
+    image: 'image-coffee-share.jpg',
     caption: "Let's connect.",
     alt: 'Three coffee cups together.',
   },
   {
-    image: image1,
+    image: 'image-meeting-room.jpg',
     caption: 'Discover our work culture.',
     alt: 'A group of people in a meeting.',
   },
   {
-    image: image2,
+    image: 'image-coffee-pour.jpg',
     caption: 'Did we mention free coffee?',
     alt: 'A person holding a coffee cup.',
   },
 ]
 const imageSlides = images.map((image, index) => (
   <Carousel.Slide key={index}>
-    <Image
-      src={image.image}
-      fit="cover"
-      alt={image.alt}
-      width="100%"
-      height="100%"
-    />
+    <Image src={image.image} fit="cover" alt={image.alt} width="100%" height="100%" />
     <Overlay backgroundOpacity={0.4} />
   </Carousel.Slide>
 ))

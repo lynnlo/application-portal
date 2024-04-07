@@ -3,11 +3,6 @@ import { Box, Group, Image, useMantineColorScheme, getBreakpointValue } from '@m
 import { useNavigate } from 'react-router-dom'
 import { useMediaQuery } from '@mantine/hooks'
 
-import logo_mobile_dark from '../../data/grecco_logo_mobile.png'
-import logo_desktop_dark from '../../data/grecco_logo_desktop.png'
-import logo_mobile_light from '../../data/grecco_logo_mobile_light.png'
-import logo_desktop_light from '../../data/grecco_logo_desktop_light.png'
-
 import classes from './Logo.module.css'
 
 interface LogoProps {
@@ -37,14 +32,14 @@ export default function Logo(props: LogoProps) {
       {(isFull && !props.alwaysSmall) || props.alwaysFull ? (
         (colorScheme === 'dark' && !props.alwaysLight) || props.alwaysDark ? (
           <Image
-            src={logo_desktop_dark}
+            src="grecco_logo_desktop.png"
             width={props.width || 200}
             height={props.height || 70}
             style={props.style}
           />
         ) : (
           <Image
-            src={logo_desktop_light}
+            src="grecco_logo_desktop_light.png"
             width={props.width || 200}
             height={props.height || 70}
             style={props.style}
@@ -52,14 +47,14 @@ export default function Logo(props: LogoProps) {
         )
       ) : (colorScheme === 'dark' && !props.alwaysLight) || props.alwaysDark ? (
         <Image
-          src={logo_mobile_dark}
+          src="grecco_logo_mobile.png"
           width={props.width || 200}
           height={props.height || 70}
           style={props.style}
         />
       ) : (
         <Image
-          src={logo_mobile_light}
+          src="grecco_logo_mobile_light.png"
           width={props.width || 200}
           height={props.height || 70}
           style={props.style}
