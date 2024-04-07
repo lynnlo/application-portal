@@ -115,7 +115,7 @@ export const Apply = () => {
       <Center>
         <Stack>
           <Paper w={360} h={400} p="lg" shadow="md" radius="md" withBorder>
-            <Form form={form} style={{ height: '100%' }}>
+            <form>
               <SwitchTransition mode="out-in">
                 <CSSTransition
                   key={activeStep}
@@ -213,15 +213,6 @@ export const Apply = () => {
                           <Group>
                             <Button
                               onClick={() => {
-                                navigate('/profile')
-                              }}
-                              variant="subtle"
-                              color="grey"
-                            >
-                              View Profile
-                            </Button>
-                            <Button
-                              onClick={() => {
                                 navigate('/')
                               }}
                             >
@@ -234,7 +225,7 @@ export const Apply = () => {
                   </Container>
                 </CSSTransition>
               </SwitchTransition>
-            </Form>
+            </form>
           </Paper>
           {activeStep !== 3 && (
             <Group grow>
