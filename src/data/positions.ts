@@ -2,9 +2,9 @@ export interface Position {
   position: string
   salary0: number
   salary1: number
-  location: 'Phoenix, AZ' | 'Remote'
+  location: 'Phoenix, AZ' | 'Glendale, Az' | 'Remote'
   jobType: 'Full-time' | 'Part-time' | 'Contract'
-  jobCategory: 'Design' | 'Technology' | 'Business' | 'Marketing' | 'Sales'
+  jobCategory: 'Technology' | 'Sales' | 'Marketing' | 'Café'
   description: string
   requirements: string
 }

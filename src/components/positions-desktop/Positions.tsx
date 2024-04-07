@@ -13,7 +13,7 @@ export const PositionsDesktop = ({ data }: { data: Position[] }) => {
     jobType: [],
     jobLocation: [],
     jobCategory: [],
-    salaryRange: [40, 200],
+    salaryRange: [20, 200],
   })
 
   const get_filtered_data = () => {

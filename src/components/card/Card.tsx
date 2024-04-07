@@ -10,6 +10,8 @@ import {
   Stack,
   Image,
   ActionIcon,
+  Chip,
+  Pill,
 } from '@mantine/core'
 import { useNavigate } from 'react-router-dom'
 import {
@@ -30,16 +32,17 @@ export default function CardComponent(props: Position) {
   return (
     <Box className={classes.box}>
       <Paper className={classes.card} p="lg" withBorder shadow="lg">
-        <Group gap={5}>
-          <Title order={4}>{props.position}</Title>
-          <Text size="sm">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, eos?
-          </Text>
+        <Group>
+          <Text size="sm">{props.jobCategory}</Text>
+          <Group gap={5}>
+            <Title order={3}>{props.position}</Title>
+            <Text size="sm">{props.description}</Text>
+          </Group>
         </Group>
         <Group>
           <Group gap={5}>
             <IconBriefcase size={30} />
-            <Text size="sm">{true ? 'Full-time' : 'Part-time'}</Text>
+            <Text size="sm">{props.jobType}</Text>
           </Group>
           <Group gap={5}>
             <IconMapPin />

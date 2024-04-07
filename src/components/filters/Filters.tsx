@@ -23,7 +23,7 @@ export const Filters = ({ filter, setFilter }: FiltersProps) => {
         <Title order={3}>Job Location</Title>
         <MultiSelect
           placeholder="Select a location"
-          data={['Phoenix, AZ', 'Remote']}
+          data={['Phoenix, AZ', 'Glendale, AZ', 'Remote']}
           onChange={(value) => {
             setFilter({ ...filter, jobLocation: value })
           }}
@@ -39,22 +39,22 @@ export const Filters = ({ filter, setFilter }: FiltersProps) => {
         <Title order={3}>Job Category</Title>
         <MultiSelect
           placeholder="Select a category"
-          data={['Engineering', 'Marketing', 'Sales', 'Business']}
+          data={['Technology', 'Marketing', 'Sales', 'Café']}
           onChange={(value) => {
             setFilter({ ...filter, jobCategory: value })
           }}
         />
         <Title order={3}>Salary Range</Title>
         <RangeSlider
-          min={40}
+          w="95%"
+          min={20}
           max={200}
           label={null}
           marks={[
-            { value: 40, label: '40k' },
-            { value: 80, label: '80k' },
-            { value: 120, label: '120k' },
-            { value: 160, label: '160k' },
-            { value: 200, label: '200k' },
+            { value: 20, label: '$20k' },
+            { value: 80, label: '$80k' },
+            { value: 140, label: '$140k' },
+            { value: 200, label: '$200k' },
           ]}
           onChange={(value) => {
             setFilter({ ...filter, salaryRange: value })

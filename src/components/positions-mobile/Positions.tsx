@@ -27,7 +27,7 @@ export const PositionsMobile = ({ data }: { data: Position[] }) => {
     jobType: [],
     jobLocation: [],
     jobCategory: [],
-    salaryRange: [40, 200],
+    salaryRange: [20, 200],
   })
 
   const get_filtered_data = () => {
@@ -58,7 +58,7 @@ export const PositionsMobile = ({ data }: { data: Position[] }) => {
 
   return (
     <>
-      <Center style={{ width: '100vw', height: '90vh' }}>
+      <Center style={{ width: '100vw', height: '94vh' }}>
         <Stack style={{ width: '90vw', height: '80vh' }}>
           <Title order={2}>Available Positions</Title>
           <Button
@@ -85,7 +85,7 @@ export const PositionsMobile = ({ data }: { data: Position[] }) => {
           setOpened(false)
         }}
       >
-        <ScrollArea scrollbarSize={0}>
+        <ScrollArea h="80vh" scrollbarSize={0}>
           <Filters filter={filter} setFilter={setFilter} />
         </ScrollArea>
       </Drawer>

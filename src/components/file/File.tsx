@@ -12,6 +12,7 @@ import {
   ActionIcon,
 } from '@mantine/core'
 import { useNavigate } from 'react-router-dom'
+import { Parallax } from 'react-scroll-parallax'
 
 import { Position } from '../../data/positions'
 import classes from './File.module.css'
@@ -29,9 +30,10 @@ export default function FileComponent(props: Position) {
       }}
     >
       <Group h="100%" justify="space-between">
-        <Title w="60%" size="4vw">
-          {props.position}
-        </Title>
+        <Stack w="50%" gap="sm">
+          <Title size="3vw">{props.position}</Title>
+          <Text size="1vh">{props.description}</Text>
+        </Stack>
         <Stack w="30%" gap="sm">
           <Text size="2.2vw">{props.jobType}</Text>
           <Text size="2vw">{props.location}</Text>
