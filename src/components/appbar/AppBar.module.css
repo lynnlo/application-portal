@@ -2,6 +2,10 @@
   width: 100%;
   background: var(--mantine-color-body);
   padding: var(--mantine-spacing-sm) var(--mantine-spacing-md);
+
+  @media (max-width: 768px) {
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+  }
 }
 
 .link {

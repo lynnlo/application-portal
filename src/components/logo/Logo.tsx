@@ -16,8 +16,8 @@ interface LogoProps {
   alwaysFull?: boolean
   alwaysSmall?: boolean
   style?: React.CSSProperties
-  height?: number
-  width?: number
+  height?: any
+  width?: any
 }
 
 export default function Logo(props: LogoProps) {

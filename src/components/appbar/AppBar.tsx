@@ -9,15 +9,18 @@ import {
   Drawer,
   Stack,
   Title,
+  Center,
+  Container,
 } from '@mantine/core'
 import { Link, useNavigate } from 'react-router-dom'
-import { IconBrightnessDown, IconMenu2, IconStack } from '@tabler/icons-react'
+import { IconBrightnessDown, IconCircle, IconMenu2, IconStack } from '@tabler/icons-react'
 import { User } from '@supabase/supabase-js'
 
 import supabase from '../../supabase'
 
 import classes from './AppBar.module.css'
 import Logo from '../logo/Logo'
+import Spacer from '../spacer/Spacer'
 
 export default function AppBarComponent() {
   const navigate = useNavigate()
@@ -34,13 +37,11 @@ export default function AppBarComponent() {
   }, [])
 
   return (
-    <Box mih="8vh">
+    <Box mih="6vh">
       <header className={classes.header}>
-        <Group justify="space-between">
-          <Logo />
-
+        <Group justify="space-around" visibleFrom="md">
           {/* Desktop */}
-          <Group justify="space-evenly" visibleFrom="md">
+          <Group justify="space-evenly">
             <Link className={classes.link} to="/">
               <Text> Home </Text>
             </Link>
@@ -52,7 +53,18 @@ export default function AppBarComponent() {
             </Link>
           </Group>
 
-          <Group justify="space-evenly" visibleFrom="md">
+          <Group
+            pos="absolute"
+            top="0vh"
+            bg="var(--mantine-color-body)"
+            p={20}
+            style={{ borderRadius: '100%', aspectRatio: '1/1' }}
+            visibleFrom="md"
+          >
+            <Logo alwaysSmall style={{ width: '8vh', height: '8vh' }} />
+          </Group>
+
+          <Group justify="space-evenly">
             <ActionIcon
               variant="subtle"
               color="light"
@@ -98,8 +110,11 @@ export default function AppBarComponent() {
               </>
             )}
           </Group>
+        </Group>
 
-          {/* Mobile */}
+        {/* Mobile */}
+        <Group justify="space-between" hiddenFrom="md">
+          <Logo />
           <Group hiddenFrom="md">
             <ActionIcon
               variant="subtle"
@@ -118,91 +133,91 @@ export default function AppBarComponent() {
               <IconMenu2 />
             </ActionIcon>
           </Group>
+          <Drawer
+            opened={opened}
+            onClose={() => {
+              setOpened(false)
+            }}
+            title={<Title order={3}> Grecco Co. Careers </Title>}
+          >
+            <Stack justify="space-between" h="90vh">
+              <Stack gap="md" align="start">
+                <Button
+                  variant="subtle"
+                  className={classes.link}
+                  onClick={() => {
+                    setOpened(false)
+                    navigate('/')
+                  }}
+                >
+                  <Text> Home </Text>
+                </Button>
+                <Button
+                  variant="subtle"
+                  className={classes.link}
+                  onClick={() => {
+                    setOpened(false)
+                    navigate('/positions')
+                  }}
+                >
+                  <Text> Positions </Text>
+                </Button>
+                <Button
+                  variant="subtle"
+                  className={classes.link}
+                  onClick={() => {
+                    setOpened(false)
+                    navigate('/about')
+                  }}
+                >
+                  <Text> About Us </Text>
+                </Button>
+              </Stack>
+              <Stack>
+                {user ? (
+                  <>
+                    <Button
+                      variant="subtle"
+                      color="grey"
+                      onClick={() => {
+                        supabase.auth.signOut()
+                        setUser(undefined)
+                        setOpened(false)
+                      }}
+                    >
+                      Log Out
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button
+                      variant="outline"
+                      color="light"
+                      onClick={() => {
+                        navigate('login', { state: { register: true } })
+                        setOpened(false)
+                      }}
+                    >
+                      Register
+                    </Button>
+                    <Button
+                      color="blue"
+                      onClick={() => {
+                        navigate('login', { state: { register: false } })
+                        setOpened(false)
+                      }}
+                    >
+                      Login
+                    </Button>
+                  </>
+                )}
+                <Text ta="center" size="xs" hiddenFrom="sm">
+                  © 2024 Grecco Co.
+                </Text>
+              </Stack>
+            </Stack>
+          </Drawer>
         </Group>
-        <Drawer
-          opened={opened}
-          onClose={() => {
-            setOpened(false)
-          }}
-          title={<Title order={3}> Grecco Co. Careers </Title>}
-        >
-          <Stack justify="space-between" h="90vh">
-            <Stack gap="md" align="start">
-              <Button
-                variant="subtle"
-                className={classes.link}
-                onClick={() => {
-                  setOpened(false)
-                  navigate('/')
-                }}
-              >
-                <Text> Home </Text>
-              </Button>
-              <Button
-                variant="subtle"
-                className={classes.link}
-                onClick={() => {
-                  setOpened(false)
-                  navigate('/positions')
-                }}
-              >
-                <Text> Positions </Text>
-              </Button>
-              <Button
-                variant="subtle"
-                className={classes.link}
-                onClick={() => {
-                  setOpened(false)
-                  navigate('/about')
-                }}
-              >
-                <Text> About Us </Text>
-              </Button>
-            </Stack>
-            <Stack>
-              {user ? (
-                <>
-                  <Button
-                    variant="subtle"
-                    color="grey"
-                    onClick={() => {
-                      supabase.auth.signOut()
-                      setUser(undefined)
-                      setOpened(false)
-                    }}
-                  >
-                    Log Out
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button
-                    variant="outline"
-                    color="light"
-                    onClick={() => {
-                      navigate('login', { state: { register: true } })
-                      setOpened(false)
-                    }}
-                  >
-                    Register
-                  </Button>
-                  <Button
-                    color="blue"
-                    onClick={() => {
-                      navigate('login', { state: { register: false } })
-                      setOpened(false)
-                    }}
-                  >
-                    Login
-                  </Button>
-                </>
-              )}
-              <Text ta="center" size="xs" hiddenFrom="sm">
-                © 2024 Grecco Co.
-              </Text>
-            </Stack>
-          </Stack>
-        </Drawer>
       </header>
     </Box>
   )

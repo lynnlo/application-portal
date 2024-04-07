@@ -50,13 +50,13 @@ export default function CarouselComponent() {
         draggable={false}
         plugins={[autoplay.current]}
         align="center"
-        height="92vh"
+        height="94vh"
         loop
         slideSize="100%"
       >
         {imageSlides}
       </Carousel>
-      <Overlay backgroundOpacity={0} mt="8vh" h="92vh" zIndex={0}>
+      <Overlay backgroundOpacity={0} mt="8vh" h="94vh" zIndex={0}>
         <Flex align="center" justify="center" direction="column" h="100%">
           <Parallax speed={-10}>
             <Title

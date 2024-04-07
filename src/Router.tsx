@@ -16,7 +16,7 @@ export function Router() {
         <AppShell.Header withBorder>
           <AppBar />
         </AppShell.Header>
-        <AppShell.Main pt="8vh">
+        <AppShell.Main pt="6vh">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/positions" element={<PositionsPage />} />

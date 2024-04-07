@@ -216,7 +216,7 @@ export const About = () => {
               </Text>
               <Button w="65%" component={Link} to="/positions">
                 View Open Positions
-              </Button>
+              </Button>s
             </Stack>
           </Flex>
         </section>

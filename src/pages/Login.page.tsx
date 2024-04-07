@@ -70,7 +70,7 @@ export function LoginPage() {
 
   return (
     <>
-      <Center h="92vh">
+      <Center h="94vh">
         {register ? (
           <Register form={form} handleRegister={handleRegister} error={error} />
         ) : (
