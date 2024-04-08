@@ -101,7 +101,7 @@
 {#each data as { title, link }, i}
   <iframe
     class="full"
-    style="z-index: {i + 1 === page ? 10 : 0};"
+    hidden={i + 1 !== page}
     src={link}
     {title}
   ></iframe>
