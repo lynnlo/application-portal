@@ -9,7 +9,7 @@ const config = {
     adapter: adapter({
       edge: false,
     }),
-    outDir: "dist",
+    outDir: "build",
   },
 };
 
