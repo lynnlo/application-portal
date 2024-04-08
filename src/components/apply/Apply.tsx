@@ -26,7 +26,7 @@ import dayjs from 'dayjs'
 
 import supabase from '../../supabase'
 
-import './Apply.module.css'
+import './Apply.css'
 
 export const Apply = () => {
   const navigate = useNavigate()
@@ -115,7 +115,7 @@ export const Apply = () => {
       <Center>
         <Stack>
           <Paper w={360} h={400} p="lg" shadow="md" radius="md" withBorder>
-            <Form form={form} style={{ height: '100%' }} netlify="true">
+            <Form form={form} style={{ height: '100%' }} data-netlify="true">
               <SwitchTransition mode="out-in">
                 <CSSTransition
                   key={activeStep}
