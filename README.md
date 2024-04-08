@@ -1,34 +1,38 @@
-# Mantine Vite template
+# create-svelte
 
-## Features
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-This template comes with the following features:
+## Creating a project
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Vitest](https://vitest.dev/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+If you're seeing this, you've probably already done this step. Congrats!
 
-## npm scripts
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-## Build and dev scripts
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-- `dev` – start development server
-- `build` – build production version of the app
-- `preview` – locally preview production build
+## Developing
 
-### Testing scripts
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `vitest` – runs vitest tests
-- `vitest:watch` – starts vitest watch
-- `test` – runs `vitest`, `prettier:check`, `lint` and `typecheck` scripts
+```bash
+npm run dev
 
-### Other scripts
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
