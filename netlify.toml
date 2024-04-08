@@ -1,5 +1,8 @@
 [[redirects]]
-  from = "/*"
-  status = 200
-  to = "/.netlify/functions/render"
+from = "/*"
+status = 200
+to = "/.netlify/functions/render"
 
+[build]
+publish = "/.netlify"
+command = "pnpm run build"
