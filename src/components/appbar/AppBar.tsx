@@ -13,14 +13,13 @@ import {
   Container,
 } from '@mantine/core'
 import { Link, useNavigate } from 'react-router-dom'
-import { IconBrightnessDown, IconCircle, IconMenu2, IconStack } from '@tabler/icons-react'
+import { IconBrightnessDown, IconMenu2 } from '@tabler/icons-react'
 import { User } from '@supabase/supabase-js'
 
 import supabase from '../../supabase'
 
 import classes from './AppBar.module.css'
 import Logo from '../logo/Logo'
-import Spacer from '../spacer/Spacer'
 
 export default function AppBarComponent() {
   const navigate = useNavigate()

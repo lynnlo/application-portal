@@ -1,10 +1,8 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { Carousel } from '@mantine/carousel'
 import { Button, Center, Flex, Image, Overlay, Stack, Text, Title } from '@mantine/core'
 import Autoplay from 'embla-carousel-autoplay'
 import { Parallax } from 'react-scroll-parallax'
-
-import Logo from '../logo/Logo'
 
 const images = [
   {

@@ -12,8 +12,6 @@ import {
   ActionIcon,
 } from '@mantine/core'
 import { useNavigate } from 'react-router-dom'
-import { Parallax } from 'react-scroll-parallax'
-
 import { Position } from '../../data/positions'
 import classes from './File.module.css'
 

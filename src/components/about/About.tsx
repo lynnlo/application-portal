@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Container,
   Title,
@@ -13,8 +12,8 @@ import {
   ScrollArea,
   useMantineColorScheme,
 } from '@mantine/core'
-import { Link, Form } from 'react-router-dom'
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
+import { Link } from 'react-router-dom'
+import { Parallax } from 'react-scroll-parallax'
 
 import classes from './About.module.css'
 

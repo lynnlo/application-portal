@@ -17,13 +17,10 @@ import {
   Select,
   Checkbox,
 } from '@mantine/core'
-import { DateInput } from '@mantine/dates'
 import { SwitchTransition, CSSTransition, TransitionGroup } from 'react-transition-group'
 import { useNavigate } from 'react-router-dom'
 import { User } from '@supabase/supabase-js'
 import { Form, useForm } from '@mantine/form'
-import dayjs from 'dayjs'
-
 import supabase from '../../supabase'
 
 import './Apply.css'

@@ -12,12 +12,9 @@ import {
   Drawer,
 } from '@mantine/core'
 
-import Card from '../card/Card'
 import { Filters } from '../filters/Filters'
 import File from '../file/File'
 import { Filter, Position } from '../../data/positions'
-
-import classes from './Positions.module.css'
 
 export const PositionsMobile = ({ data }: { data: Position[] }) => {
   const [opened, setOpened] = React.useState(false)

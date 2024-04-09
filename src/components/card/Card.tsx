@@ -16,9 +16,6 @@ import {
 import { useNavigate } from 'react-router-dom'
 import {
   IconBriefcase,
-  IconClock,
-  IconLocation,
-  IconLocationPin,
   IconMapPin,
   IconPin,
 } from '@tabler/icons-react'

@@ -1,4 +1,3 @@
-import React from 'react'
 import {
   Box,
   Text,
@@ -17,9 +16,7 @@ import { Link } from 'react-router-dom'
 
 import { Parallax } from 'react-scroll-parallax'
 
-import galaxy from './orange.svg'
 import classes from './Benefits.module.css'
-import Logo from '../logo/Logo'
 
 export default function Benefits() {
   return (
