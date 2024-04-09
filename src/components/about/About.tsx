@@ -24,7 +24,7 @@ export const About = () => {
   return (
     <Flex direction="column" align="center">
       <section className={classes.section}>
-        <BackgroundImage src="images/image-coffee-pour.jpg" h="100%" w="100%">
+        <BackgroundImage src="images/image-coffee-pour.webp" h="100%" w="100%">
           <Flex w="100%" h="100%" align="center" justify="center" bg="#0005">
             <Container size="xl">
               <Parallax speed={20}>
@@ -85,10 +85,10 @@ export const About = () => {
               </Container>
               <Container size="xl">
                 <Parallax speed={-30}>
-                  <AspectRatio ratio={1} w="35vw">
+                  <AspectRatio ratio={1} w="30vw">
                     <img
                       alt="Arizona landscape with cactus and bushes"
-                      src="images/image-arizona-landscape.jpg"
+                      src="images/image-arizona-landscape.webp"
                     />
                   </AspectRatio>
                 </Parallax>
@@ -110,10 +110,10 @@ export const About = () => {
             <Flex w="100%" h="100%" align="center" justify="center">
               <Container size="xl">
                 <Parallax speed={30}>
-                  <AspectRatio ratio={1} w="35vw">
+                  <AspectRatio ratio={1} w="30vw">
                     <img
                       alt="A busy coffee shop with people working"
-                      src="images/image-coffee-team.jpg"
+                      src="images/image-coffee-team.webp"
                     />
                   </AspectRatio>
                 </Parallax>
@@ -143,23 +143,29 @@ export const About = () => {
           >
             <Flex w="100%" h="100%" mt="2em" align="center" justify="center">
               <Stack align="center" gap="lg">
-                <Title ta="center" order={1} size="4vw" w="40vw">
-                  You.
-                </Title>
-                <Text ta="center">
-                  We're always looking for new team members who are passionate as we are about
-                  coffee.
-                </Text>
-                <Button
-                  p="sm"
-                  px="xl"
-                  variant="gradient"
-                  component={Link}
-                  to="/positions"
-                  style={{ boxSizing: 'content-box' }}
-                >
-                  View Open Positions
-                </Button>
+                <Parallax speed={10}>
+                  <Title ta="center" order={1} size="4vw" w="40vw">
+                    You.
+                  </Title>
+                </Parallax>
+                <Parallax speed={10}>
+                  <Text ta="center">
+                    Business is good and we are expanding. <br />
+                    We would be honored if you joined us.
+                  </Text>
+                </Parallax>
+                <Parallax speed={20} scale={[0.8, 1.3]}>
+                  <Button
+                    p="sm"
+                    px="xl"
+                    variant="gradient"
+                    component={Link}
+                    to="/positions"
+                    style={{ boxSizing: 'content-box' }}
+                  >
+                    View Open Positions
+                  </Button>
+                </Parallax>
               </Stack>
             </Flex>
           </BackgroundImage>
@@ -169,7 +175,7 @@ export const About = () => {
       {/* Mobile */}
       <Group gap={0} hiddenFrom="lg">
         <section className={classes.section}>
-          <BackgroundImage src="images/image-arizona-landscape.jpg" h="100%" w="100%">
+          <BackgroundImage src="images/image-arizona-landscape.webp" h="100%" w="100%">
             <Flex
               w="100%"
               h="100%"
